@@ -1,0 +1,268 @@
+/* General Reset */
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Readex Pro', sans-serif;
+    }
+    
+    body {
+        background-color: #f9f9f9;
+        color: #000;
+    }
+    
+    /* Navbar Styles */
+    header.navbar {
+        background-color: #7ed1ea;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    z-index: 1000; ;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .logo span {
+        color: #000000;
+        font-size: 1.2rem;
+    }
+    
+    .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    
+    .search-bar input {
+        padding: 5px 10px;
+        border: none;
+        outline: none;
+        width: 200px;
+        font-size: 0.9rem;
+    }
+    
+    .search-bar button {
+        padding: 5px 10px;
+        background-color: transparent;
+        color: #000;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .search-bar button i {
+        font-size: 1rem;
+    }
+    
+    .search-bar button:hover {
+        background-color: #bcbcbc;
+    }
+    
+    .contact-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 0.9rem;
+        transition: color 0.3s;
+    }
+    
+    .contact-link:hover {
+        color: #333;
+    }
+    
+    /* Main Content */
+    .main-content {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    
+    .main-content h1 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .info-btn {
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s;
+        text-decoration: none; /* Remove underline for all buttons */
+        color: #000;
+    }
+    
+    .info-btn:hover {
+        background-color: #ddd;
+    }
+    
+    .download-section {
+        margin-bottom: 30px;
+    }
+    
+    .download-btn {
+        background-color: #d8f4ff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-weight:700;
+        display: flexbox;
+        align-items: center;
+        gap: 10px;
+        margin: center;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        color: #000;
+    }
+    
+    .download-btn i {
+        font-size: 1rem;
+    }
+    
+    .download-btn:hover {
+        background-color: #bce3f2;
+    }
+    
+    /* Logo Section */
+    .logo-section {
+        margin-top: 20px;
+    }
+    
+    .university-logo {
+        width: 250px;
+        height: auto;
+        margin-top: 10px;
+    }
+    
+    .mu-results {
+        text-decoration: none; /* Remove underline */
+        color: inherit;
+    }
+    /* Contact Container Styles */
+.contact-form {
+    max-width: 600px; /* Set a max width for the form */
+    margin: 40px auto; /* Center the form */
+    padding: 20px; /* Add padding */
+    background-color: #fff; /* White background for the form */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading Styles (contact.html) */
+.contact-form h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    font-size: 1.8rem; /* Font size for the heading */
+    font-weight: 700; /* Bold font weight */
+    text-align: center; /* Center the heading */
+}
+
+/* Form Element Styles */
+.label{
+    display: block; /* Make labels block elements */
+    margin-bottom: 5px; /* Space below labels */
+    font-weight: 600; /* Bold font weight for labels */
+}
+
+.contactform input[type="text"],
+.contactform input[type="email"],
+
+/* Button Styles */
+.send-btn {
+    background-color:#7ed1ea; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-weight: 600; /* Bold font weight */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.send-btn:hover {
+    background-color: #5bb8e4; /* Darker shade on hover */
+}
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+}
+.info-icon {
+    font-size: 10px; /* Size of the icon */
+    color: #000000; /* Color of the icon */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  position: relative; /* Position relative for tooltip */
+    margin-left: 380px; /* Space between text and icon */
+    align-items:right;
+}
+
+.tooltip {
+    background-color: #ddd;
+    visibility: hidden; /* Hidden by default */
+    width: 100px; /* Width of the tooltip */
+    color: #000000; /* Text color */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+    padding: 5px; /* Padding */
+    position: absolute; /* Positioning */
+    z-index: 1; /* On top of other elements */
+    bottom: 125%; /* Position above the icon */
+    left: 90%; /* Center the tooltip */
+    margin-left: -95px; /* Adjust for tooltip width */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s; /* Fade effect */
+    
+}
+
+.info-icon:hover .tooltip {
+    visibility: visible; /* Show tooltip on hover */
+    opacity: 1; /* Fade in */
+}
+
+.search-results {
+    display: none; /* Hide by default */
+    margin-top: 225px; /* Space between search bar and results */
+    position: absolute; /* Position it absolutely */
+    background-color: white; /* Background color for visibility */
+    border: 1px solid #ccc; /* Border for the results */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 175px; /* Match the width of the search input */
+    margin-left: 30px;
+    margin-bottom: 70px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.search-results a {
+    display: block;
+    padding: 10px; /* Padding for clickable area */
+    text-decoration: none;
+    color: #51a6bf; /* Link color */
+    transition: background-color 0.3s; 
+}
+.search-results a:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
