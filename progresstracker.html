@@ -153,10 +153,16 @@ td {
         width: 90%; /* Use a larger width on mobile */
         margin: 10px auto; /* Center the input container */
     }
-    .mobile-only {
-        padding: 5px 10px;
-        font-size: 14px;
-    }
+    .btn-add {
+            padding: 5px 10px;
+            background-color: #4caf50;
+        }
+
+    .btn-remove {
+            padding: 5px 10px;
+            background-color: #f44336;
+ }
+    
     
 }
         .button-container {
@@ -224,11 +230,9 @@ td {
    <br>
 <div style="text-align: center;" class="button-container">
         <button class="btn btn-add" onclick="addCourse()">+ Course</button>
-        <button class="btn btn-add" onclick="addModule()">+ Module</button>
-        <button class="mobile-only" onclick="addModule()">+ Mod</button>
+        <button class="btn btn-add" onclick="addModule()">+ Mod</button>
         <button class="btn btn-remove" onclick="removeCourse()">- Course</button>
-        <button class="btn btn-remove" onclick="removeModule()">- Module</button> 
-        <button class="mobile-only" onclick="removeModule()">- Mod</button>
+        <button class="btn btn-remove" onclick="removeModule()">- Mod</button> 
     </div>
 
     <table>
