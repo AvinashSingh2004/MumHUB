@@ -80,8 +80,8 @@ header.navbar {
 .info-btn {
     background-color: #f1f1f1;
     border: 1px solid #7ed1ea;
-    padding: 5px 10px;
-    border-radius: 15px;
+    padding: 10px 20px;
+    border-radius: 25px;
     cursor: pointer;
     font-weight: 600;
     font-size: 0.8rem;
@@ -288,6 +288,8 @@ header.navbar {
     .info-btn {
         width:auto;
         flex: none; /* Make buttons full width on mobile */
+        padding: 5px 10px;
+        border-radius: 15px;
         margin-bottom: 10px; /* Space between buttons */
     }
 
@@ -300,7 +302,9 @@ header.navbar {
         width: 90%; /* Use percentage for width */
         padding: 15px; /* Adjust padding */
     }
-
+    .contact-link {
+        margin:10px 0;
+    }
     .footer {
         padding: 1rem; /* Adjust footer padding */
     }
