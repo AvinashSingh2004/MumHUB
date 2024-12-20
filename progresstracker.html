@@ -208,8 +208,9 @@ td:hover {
             margin: 10px 0;
         }
     .btn {
-            padding: 5px 10px;
-            font-size: 10px; 
+            padding: 6px 12px;
+            font-size: 12px; 
+            border-radius: 10px;
         }
 
     .btn-add {
@@ -237,9 +238,7 @@ td:hover {
             <a href="index.html" class="contact-link">Home</a>
         </nav>
     </header>
-    <br>
-<p style="text-align: center;">"This tool enables you to track and calculate the progress of completed modules for each course/subject, facilitating effective learning and teaching assessments."</p>
-   <br>
+    <br><br>
 <div style="text-align: center;" class="button-container">
         <button class="btn btn-add" onclick="addCourse()">+ Course</button>
         <button class="btn btn-add" onclick="addModule()">+ Mod</button>
@@ -279,7 +278,7 @@ td:hover {
         <button class="btn btn-calculate" onclick="calculatePercentage()">Calculate Progress</button><br>
        <br><p id="percentage">Total Progress: 0%</p>
     </div>
-
+<br><p style="text-align: center;">"This tool enables you to track and calculate<br>the progress of completed modules for each<br>course/subject, facilitating effective learning<br>and teaching assessments."</p><br>
     <script>
         let progressNeedsUpdate = true;
         function toggleStatus(cell) {
