@@ -105,7 +105,7 @@ header.navbar {
     border-radius: 25px;
     background-color: #fff;
     overflow: hidden;
-    width: 200px; /* Full width for search bar */
+    width: 250px; /* Full width for search bar */
 }
 
 .search-bar input {
@@ -278,7 +278,7 @@ header.navbar {
     }
 
     .search-bar {
-        width: 170px; /* Full width for search bar */
+        width: 250px; /* Full width for search bar */
     }
 
     .search-bar input {
@@ -292,7 +292,7 @@ header.navbar {
     }
 
     .download-btn {
-        width: 200px; /* Full width for download button on mobile */
+        width: 250px; /* Full width for download button on mobile */
         text-align: center; /* Center text */
     }
 
