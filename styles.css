@@ -105,14 +105,14 @@ header.navbar {
     border-radius: 25px;
     background-color: #fff;
     overflow: hidden;
-    width: auto; /* Full width for search bar */
+    width: 150px; /* Full width for search bar */
 }
 
 .search-bar input {
     padding: 5px 10px;
     border: none;
     outline: none;
-    width: 200px; /* Full width for input */
+    width: 100%; /* Full width for input */
     font-size: 0.9rem;
 }
 
@@ -140,7 +140,7 @@ header.navbar {
     border-radius: 15px;
     cursor: pointer;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: inline-block;
     align-items: center;
     gap: 10px;
@@ -264,7 +264,7 @@ header.navbar {
     }
 
     .nav-actions {
-        flex-direction: column; 
+        flex-direction: row; 
         align-items: flex-start; /* Align items to the start */
         width: 100%;
     }
@@ -278,8 +278,7 @@ header.navbar {
     }
 
     .search-bar {
-        flex:1;
-        width: 100%; /* Full width for search bar */
+        width: 120px; /* Full width for search bar */
     }
 
     .search-bar input {
