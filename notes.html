@@ -37,6 +37,21 @@
         td, a {
                 text-decoration: none;
         }
+       
+ @media (max-width: 768px) {
+    table {
+        width: 90%; /* Full width on smaller screens */
+        font-size: 0.8rem;
+        display: block; /* Make the table block to enable scrolling */
+        
+    }
+    th, td {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+    h1 {
+        font-size: 24px;
+    }
+}
      
     </style>
 </head>
@@ -49,10 +64,10 @@
         </div>
     </header>
 
-    <br>
-        <h3 style="text-align: center;">"Presently, our notes coverage is limited to Computer engineering discipline"</h3>
+    <br><p style="text-align: center;">Notes will be available soon...</p>
+        <p style="text-align: center;">"Presently, our notes coverage is limited to Computer engineering discipline"</p>
         <br>
-        <h1 style="text-align: center;">First Year Engineering</h1>
+        <h1 class="h1" style="text-align: center;">First Year Engineering</h1>
         <table style="width: 60%;">
                 <thead>
                         <tr>
@@ -89,7 +104,7 @@
                         </tr>
                     </tbody>
         </table><br>
-        <h1 style="text-align: center;">Computer Engineering</h1>
+        <h1 class="h1" style="text-align: center;">Computer Engineering</h1>
         <table>
                 <thead>
                         <tr>
