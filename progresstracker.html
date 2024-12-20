@@ -183,6 +183,11 @@ td:hover {
     .bttn-share, .bttn-calculate {
             background-color: #0098cb;
         }
+
+        .buttton-container {
+            text-align: center;
+            margin: 10px 0;
+        }
     
 }
 
@@ -258,9 +263,11 @@ td:hover {
    <br>
 <div style="text-align: center;" class="button-container">
         <button class="btn btn-add" onclick="addCourse()">+ Course</button>
-        <button class="btn btn-add" onclick="addModule()">+ Mod</button>
+        <button class="btn btn-add" onclick="addModule()">+ Module</button>
         <button class="btn btn-remove" onclick="removeCourse()">- Course</button>
-        <button class="btn btn-remove" onclick="removeModule()">- Mod</button>
+        <button class="btn btn-remove" onclick="removeModule()">- Module</button></div>
+
+<div style="text-align: center;" class="buttton-container"> 
         <button class="bttn bttn-add" onclick="addCourse()">+ Course</button>
         <button class="bttn bttn-add" onclick="addModule()">+ Mod</button>
         <button class="bttn bttn-remove" onclick="removeCourse()">- Course</button>
@@ -298,6 +305,8 @@ td:hover {
     <div style="text-align: center;">
         <a href="#" id="share-link" class="btn btn-share" onclick="copyToClipboard()" style="text-decoration: none;">Share Report</a>
         <button class="btn btn-calculate" onclick="calculatePercentage()">Calculate Progress</button><br>
+        <a href="#" id="share-link" class="bttn bttn-share" onclick="copyToClipboard()" style="text-decoration: none;">Share Report</a>
+        <button class="bttn bttn-calculate" onclick="calculatePercentage()">Calculate Progress</button>
        <br><p id="percentage">Total Progress: 0%</p>
     </div>
 
