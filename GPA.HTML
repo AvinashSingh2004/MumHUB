@@ -20,6 +20,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 90%;
             width:650px;
         }
         .card-content {
@@ -69,7 +70,8 @@
         }
         
  .grade-input {
-    width: 45%; /* Full width */
+    width: 100%; /* Full width */
+    max-width: 60px;
     padding: 10px; /* Padding for better spacing */
     border: 1px solid #ccc; /* Light gray border */
     border-radius: 5px; /* Rounded corners */
@@ -115,7 +117,10 @@
             border-radius: 5px;
             color: #000000;
             background-color:#7ed1ea;
-        }
+            width: 100%; /* Full width for buttons */
+    max-width: 200px; /* Set a max width for buttons */
+ }
+
         .bton { margin: 5px;
             padding: 8px 15px;
             font-size: 14px;
@@ -165,6 +170,26 @@
             text-align: center;
             margin-top: 15px;
         }
+
+        @media (max-width: 768px) {
+    .card {
+        width: 95%; /* Adjust card width for mobile */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .credit-input, .grade-input {
+        width: 100%; /* Full width for inputs */
+        max-width: none; /* Remove max width */
+    }
+
+    th, td {
+        padding: 8px; /* Reduce padding in table cells */
+    }
+
+    .bttn, .bton, .bten, .btun, .btn {
+        font-size: 12px; /* Smaller font size for buttons */
+    }
+}
     </style>
 </head>
 <body>

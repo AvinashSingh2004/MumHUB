@@ -7,6 +7,8 @@
     }
     
     body {
+        width:100%;
+        overflow-x: hidden; 
         margin: 0;
         padding: 0;
         background-color: #f9f9f9;
@@ -16,11 +18,11 @@
     
     /* Navbar Styles */
     header.navbar {
+        width: 100%;
         background-color: #7ed1ea;
         padding: 10px 5%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
         flex-wrap: wrap;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     z-index: 1000; ;
@@ -42,13 +44,32 @@
         gap: 10px;
     }
     
+    .container {
+        width: 100%; /* Use 100% for full width */
+        max-width: 1200px; /* Optional: set a max width */
+        margin: 0 auto; /* Center the container */
+        padding: 20px; /* Add padding */
+    }
+
     
 /* Responsive styles */
 @media (max-width: 767px) {
+    header {
+        flex-direction: column; /* Stack items vertically align-items: flex-start; /* Align items to the start */
+    }
+
     .nav-actions {
         flex-direction: column; /* Stack items vertically on mobile */
         align-items: flex-start; /* Align items to the start */
     }
+    .main-content {
+        padding: 10px 2%; /* Reduce padding on smaller screens */
+    }
+
+    .main-content h1 {
+        font-size: 1.5rem; /* Reduce font size on smaller screens */
+    }
+
 }
 
     .search-bar {
@@ -99,6 +120,8 @@
     .main-content {
         text-align: center;
         padding: 20px 5%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
     .main-content h1 {
@@ -125,7 +148,6 @@
         transition: all 0.3s;
         text-decoration: none; /* Remove underline for all buttons */
         color: #000;
-        min-width: 120px; /* Minimum width for buttons */
         text-align: center;
     }
     
