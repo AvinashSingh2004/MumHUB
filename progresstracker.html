@@ -131,11 +131,27 @@ td {
 /* Responsive Design */
 @media (max-width: 768px) {
     table {
-        width: 80%; /* Full width on smaller screens */
+        width: 100%; /* Full width on smaller screens */
+        overflow-x: auto; /* Allow horizontal scrolling */
+        display: block; /* Make the table block to enable scrolling */
+        box-shadow: none; /* Remove shadow for better visibility */
     }
 
     th, td {
         padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 0.9rem; /* Slightly smaller font size for better fit */
+    }
+
+    /* Adjust the course input container for mobile */
+    .course-input {
+        width: 90%; /* Use a larger width on mobile */
+        margin: 10px auto; /* Center the input container */
+    }
+
+    /* Adjust button styles for mobile */
+    .btn {
+        width: 100%; /* Full width for buttons on mobile */
+        margin: 5px 0; /* Space between buttons */
     }
 }
 
