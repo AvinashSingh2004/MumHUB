@@ -80,10 +80,11 @@ header.navbar {
 .info-btn {
     background-color: #f1f1f1;
     border: 1px solid #7ed1ea;
-    padding: 10px 20px;
-    border-radius: 25px;
+    padding: 5px 10px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: 600;
+    font-size: 0.8rem;
     transition: all 0.3s;
     text-decoration: none; /* Remove underline for all buttons */
     color: #000;
@@ -135,10 +136,11 @@ header.navbar {
 .download-btn {
     background-color: #d8f4ff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 10px;
+    padding: 8px 15px;
+    border-radius: 15px;
     cursor: pointer;
     font-weight: 700;
+    font-size: 1rem;
     display: inline-block;
     align-items: center;
     gap: 10px;
@@ -313,6 +315,7 @@ header.navbar {
     .buttons-container {
         flex-direction: row; /* Stack buttons vertically on mobile */
         align-items: center; /* Center buttons */
+        justify-content: center;
     }
 }
 
