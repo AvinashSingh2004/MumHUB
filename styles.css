@@ -7,14 +7,17 @@
     }
     
     body {
+        margin: 0;
+        padding: 0;
         background-color: #f9f9f9;
         color: #000;
+        font-size: 16px;
     }
     
     /* Navbar Styles */
     header.navbar {
         background-color: #7ed1ea;
-        padding: 10px 20px;
+        padding: 10px 5%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,7 +25,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     z-index: 1000; ;
     }
-    
+   
     .logo {
         font-size: 1.5rem;
         font-weight: 600;
@@ -36,9 +39,18 @@
     .nav-actions {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
     
+    
+/* Responsive styles */
+@media (max-width: 767px) {
+    .nav-actions {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+}
+
     .search-bar {
         display: flex;
         align-items: center;
@@ -86,7 +98,7 @@
     /* Main Content */
     .main-content {
         text-align: center;
-        padding: 40px 20px;
+        padding: 20px 5%;
     }
     
     .main-content h1 {
@@ -98,7 +110,7 @@
     .buttons-container {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
         margin-bottom: 30px;
         flex-wrap: wrap;
     }
@@ -113,14 +125,24 @@
         transition: all 0.3s;
         text-decoration: none; /* Remove underline for all buttons */
         color: #000;
+        min-width: 120px; /* Minimum width for buttons */
+        text-align: center;
     }
     
     .info-btn:hover {
         background-color: #ddd;
     }
     
+    @media (max-width: 767px) {
+        .info-btn {
+            flex: 1 1 100%; /* Make buttons full width on mobile */
+            margin-bottom: 10px; /* Space between buttons */
+        }
+    }
+
     .download-section {
         margin-bottom: 30px;
+        margin-left: 10px;
     }
     
     .download-btn {
@@ -130,10 +152,9 @@
         border-radius: 10px;
         cursor: pointer;
         font-weight:700;
-        display: flexbox;
+        display: inline-flexbox;
         align-items: center;
         gap: 10px;
-        margin: center;
         transition: background-color 0.3s;
         text-decoration: none;
         color: #000;
@@ -211,28 +232,36 @@
     background-color: var(--primary-color);
     color: rgb(0, 0, 0);
 }
+
+.info-container {
+    display: flex;
+    justify-content: center; /* Center the items */
+    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px 0; /* Space around the container */
+}
 .info-icon {
     font-size: 10px; /* Size of the icon */
-    color: #000000; /* Color of the icon */
+    color: #000; /* Color of the icon */
     cursor: pointer; /* Change cursor to pointer on hover */
   position: relative; /* Position relative for tooltip */
-    margin-left: 380px; /* Space between text and icon */
-    align-items:right;
+    margin-left: 350px; /* Space between text and icon */
+    margin-bottom: -15px;
 }
 
 .tooltip {
     background-color: #ddd;
     visibility: hidden; /* Hidden by default */
     width: 100px; /* Width of the tooltip */
-    color: #000000; /* Text color */
+    color: #000; /* Text color */
     text-align: center; /* Center text */
     border-radius: 10px; /* Rounded corners */
     padding: 5px; /* Padding */
     position: absolute; /* Positioning */
     z-index: 1; /* On top of other elements */
     bottom: 125%; /* Position above the icon */
-    left: 90%; /* Center the tooltip */
-    margin-left: -95px; /* Adjust for tooltip width */
+    left: 50%; /* Center the tooltip */
+    margin-left: -50px; /* Adjust for tooltip width */
     opacity: 0; /* Hidden by default */
     transition: opacity 0.3s; /* Fade effect */
     
@@ -265,4 +294,51 @@
 }
 .search-results a:hover {
     background-color: #f1f1f1; /* Highlight on hover */
+}
+
+@media (min-width: 768px) {
+    body {
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+
+    .navbar {
+        padding: 10px 20px; /* More padding for larger screens */
+    }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 767px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .search-bar {
+        width: 100%; /* Full width for search bar */
+    }
+
+    .main-content {
+        padding: 10px; /* Less padding for mobile */
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .info-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .info-icon {
+        margin-bottom: 10px; /* Space below the icon */
+    }
+
+    .download-btn {
+        width: 100%; /* Full width for download button on mobile */
+        text-align: center; /* Center text */
+    }
 }
