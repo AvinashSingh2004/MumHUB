@@ -157,17 +157,23 @@ td {
         border-radius: 15px;
     }
 }
-
+        .button-container {
+            text-align: center;
+            margin: 10px 0;
+        }
        
 
         .btn {
-            margin: 10px 5px;
+            display: inline-block;
             padding: 10px 15px;
             font-size: 14px;
             cursor: pointer;
             border: none;
             border-radius: 5px;
             color: #fff;
+            background-color: #007BFF; /* Button background color */
+            transition: background-color 0.3s;
+            margin: 0 5px;
         }
 
         .btn-add {
@@ -212,11 +218,11 @@ td {
     <br>
 <p style="text-align: center;">"This tool enables you to track and calculate the progress of completed modules for each course/subject, facilitating effective learning and teaching assessments."</p>
    <br>
-<div style="text-align: center;">
-        <button class="btn btn-add" onclick="addCourse()">+ Add Course</button>
-        <button class="btn btn-add" onclick="addModule()">+ Add Module</button>
-        <button class="btn btn-remove" onclick="removeCourse()">- Remove Course</button>
-        <button class="btn btn-remove" onclick="removeModule()">- Remove Module</button>
+<div style="text-align: center;" class="button-container">
+        <button class="btn btn-add" onclick="addCourse()">+ Course</button>
+        <button class="btn btn-add" onclick="addModule()">+ Module</button>
+        <button class="btn btn-remove" onclick="removeCourse()">- Course</button>
+        <button class="btn btn-remove" onclick="removeModule()">- Module</button>
     </div>
 
     <table>
@@ -249,9 +255,9 @@ td {
 
     <div style="text-align: center;">
         <a href="#" id="share-link" class="btn btn-share" onclick="copyToClipboard()" style="text-decoration: none;">Share Report</a>
-        <button class="btn btn-calculate" onclick="calculatePercentage()">Calculate Progress</button>
-        <p id="percentage">Total Progress: 0%</p>
-    </div><br><br><br>
+        <button class="btn btn-calculate" onclick="calculatePercentage()">Calculate Progress</button><br>
+       <br><p id="percentage">Total Progress: 0%</p>
+    </div>
 
     <script>
         let progressNeedsUpdate = true;
