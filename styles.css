@@ -31,11 +31,13 @@
     .logo {
         font-size: 1.5rem;
         font-weight: 600;
+        align-items: center;
     }
     
     .logo span {
         color: #000000;
         font-size: 1.2rem;
+        align-items: center;
     }
     
     .nav-actions {
@@ -53,8 +55,12 @@
 
     
 /* Responsive styles */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+    }
     header {
+        width:100% ;
         flex-direction: column; /* Stack items vertically align-items: flex-start; /* Align items to the start */
     }
 
@@ -63,6 +69,7 @@
         align-items: flex-start; /* Align items to the start */
     }
     .main-content {
+        width: 100%;
         padding: 10px 2%; /* Reduce padding on smaller screens */
     }
 
@@ -105,6 +112,9 @@
         background-color: #bcbcbc;
     }
     
+    .contact-form {
+        max-width:768px;
+    }
     .contact-link {
         text-decoration: none;
         color: #000;
@@ -131,7 +141,7 @@
     }
     
     .buttons-container {
-        display: flex;
+        display:inline-flexbox;
         justify-content: center;
         gap: 10px;
         margin-bottom: 30px;
@@ -325,17 +335,19 @@
 
     .navbar {
         padding: 10px 20px; /* More padding for larger screens */
+
     }
 }
 
 /* Styles for mobile devices */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .navbar {
         flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
     }
 
     .search-bar {
+        align-items: center;
         width: 100%; /* Full width for search bar */
     }
 
@@ -349,7 +361,7 @@ img {
     height: auto;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .info-container {
         flex-direction: column; /* Stack items vertically on mobile */
         align-items: flex-start; /* Align items to the start */
