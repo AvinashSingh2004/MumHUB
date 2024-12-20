@@ -167,14 +167,22 @@ td:hover {
             margin: 0 5px;
         }
 
-    .btn-add {
+    .bttn-add {
             background-color: #4caf50;
         }
 
-    .btn-remove {
+    .bttn-remove {
             background-color: #f44336;
  }
-    
+    .btn, .btn-add, .btn-calculate, .btn-remove, .btn-share, .btn:hover {
+       display: none;
+    }
+
+    .bttn:hover { opacity: 0.8; }
+
+    .bttn-share, .bttn-calculate {
+            background-color: #0098cb;
+        }
     
 }
 
@@ -185,7 +193,18 @@ td:hover {
             margin: 10px 0;
         }
        
-
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            color: #fff;
+            background-color: #007BFF; /* Button background color */
+            transition: background-color 0.3s;
+            margin: 0 5px;
+        }
         
 
 
@@ -205,6 +224,10 @@ td:hover {
 
         .btn:hover {
             opacity: 0.8;
+        }
+        
+        .bttn, .bttn-add, .bttn-remove {
+            display: none;
         }
 
         #percentage {
@@ -234,10 +257,14 @@ td:hover {
 <p style="text-align: center;">"This tool enables you to track and calculate the progress of completed modules for each course/subject, facilitating effective learning and teaching assessments."</p>
    <br>
 <div style="text-align: center;" class="button-container">
-        <button class="btn bttn btn-add" onclick="addCourse()">+ Course</button>
-        <button class="btn bttn btn-add" onclick="addModule()">+ Mod</button>
-        <button class="btn bttn btn-remove" onclick="removeCourse()">- Course</button>
-        <button class="btn bttn btn-remove" onclick="removeModule()">- Mod</button> 
+        <button class="btn btn-add" onclick="addCourse()">+ Course</button>
+        <button class="btn btn-add" onclick="addModule()">+ Mod</button>
+        <button class="btn btn-remove" onclick="removeCourse()">- Course</button>
+        <button class="btn btn-remove" onclick="removeModule()">- Mod</button>
+        <button class="bttn bttn-add" onclick="addCourse()">+ Course</button>
+        <button class="bttn bttn-add" onclick="addModule()">+ Mod</button>
+        <button class="bttn bttn-remove" onclick="removeCourse()">- Course</button>
+        <button class="bttn bttn-remove" onclick="removeModule()">- Mod</button>  
     </div>
 
     <table>
