@@ -23,6 +23,7 @@ header.navbar {
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
     z-index: 1000;
@@ -87,7 +88,6 @@ header.navbar {
     text-decoration: none; /* Remove underline for all buttons */
     color: #000;
     text-align: center;
-    flex: 1 1 auto; /* Allow buttons to grow and shrink */
     display: inline-block;
     width: auto;
 }
@@ -104,14 +104,14 @@ header.navbar {
     border-radius: 25px;
     background-color: #fff;
     overflow: hidden;
-    width: 100%; /* Full width for search bar */
+    width: auto; /* Full width for search bar */
 }
 
 .search-bar input {
     padding: 5px 10px;
     border: none;
     outline: none;
-    width: 100%; /* Full width for input */
+    width: 200px; /* Full width for input */
     font-size: 0.9rem;
 }
 
@@ -165,6 +165,8 @@ header.navbar {
 .contact-link {
     text-decoration: none;
     color: #000000;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 /* Heading Styles (contact.html) */
 .contact-form h2 {
@@ -229,14 +231,15 @@ header.navbar {
 /* Search Results */
 .search-results {
     display: none; /* Hide by default */
-    margin-top: 10px; /* Space between search bar and results */
-    position: absolute; /* Position it absolutely */
+    margin-top: 200px; /* Space between search bar and results */
+    position:absolute; /* Position it absolutely */
     background-color: white; /* Background color for visibility */
     border: 1px solid #ccc; /* Border for the results */
     z-index: 1000; /* Ensure it appears above other elements */
     width: 100%; /* Match the width of the search input */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    width: 200px;
 }
 
 .search-results a {
@@ -259,8 +262,9 @@ header.navbar {
     }
 
     .nav-actions {
-        flex-direction: column; /* Stack items vertically on mobile ```css
+        flex-direction: column; 
         align-items: flex-start; /* Align items to the start */
+        width: 100%;
     }
 
     .main-content {
@@ -272,6 +276,7 @@ header.navbar {
     }
 
     .search-bar {
+        flex:1;
         width: 100%; /* Full width for search bar */
     }
 
@@ -280,6 +285,7 @@ header.navbar {
     }
 
     .info-btn {
+        width:auto;
         flex: none; /* Make buttons full width on mobile */
         margin-bottom: 10px; /* Space between buttons */
     }
@@ -303,12 +309,9 @@ header.navbar {
         align-items: flex-start; /* Align items to the start */
     }
 
-    .info-icon {
-        margin-bottom: 10px; /* Space below the icon */
-    }
 
     .buttons-container {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: row; /* Stack buttons vertically on mobile */
         align-items: center; /* Center buttons */
     }
 }
