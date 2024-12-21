@@ -176,6 +176,23 @@
     }
 });
 
+// Select all buttons and relevant elements
+const buttons = document.querySelectorAll('.download-btn, .info-btn, .send-btn, .bttn, .bton, .bten, .btun, .btn, #calculateButton, .btn-add, .btn-remove, .btn-share, .btn-calculate');
+
+// Add touch event listeners to each button
+buttons.forEach(button => {
+    button.addEventListener('touchstart', function() {
+        this.classList.add('active'); // Add active class on touch
+    });
+
+    button.addEventListener('touchend', function() {
+        this.classList.remove('active'); // Remove active class when touch ends
+    });
+
+    button.addEventListener('touchcancel', function() {
+        this.classList.remove('active'); // Remove active class if touch is canceled
+    });
+});
 
 
     </script>

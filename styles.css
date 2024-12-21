@@ -135,7 +135,7 @@ body {
 }
 
 .download-btn {
-    background-color: #d8f4ff;
+    background-color:#d8f4ff;
     border: none;
     padding: 8px 15px;
     border-radius: 15px;
@@ -145,14 +145,14 @@ body {
     display: inline-block;
     align-items: center;
     gap: 10px;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
     text-decoration: none;
     color: #000;
     width: 300px; /* Full width for download button */
 }
 
 .download-btn:hover {
-    background-color: #bce3f2;
+    background: #c3e1ec;
 }
 
 /* Contact Form */
@@ -347,6 +347,16 @@ body.dark-theme header.navbar {
         color: #ffffff; /* Light text for header */
 }
 
+body.dark-theme .download-btn {
+    background: linear-gradient(135deg, #cbe7f1, #7ed1ea); /* Darker gradient for button */
+    color: #000000; /* White text for button */
+}
+
+body.dark-theme .download-btn:hover {
+    background: linear-gradient(135deg, #d8f4ff, #96c6da); /* Change gradient on hover */
+}
+
+
 footer.footer.dark-theme {
     background: linear-gradient(135deg, #2a2a2a, #000000); 
     color: #ffffff;
@@ -374,7 +384,40 @@ footer.footer {
     color: #000; /* Default text color */
 }
 
+/* Common button styles */
+.download-btn,
+.info-btn,
+.send-btn,
+.bttn,
+.bton,
+.bten,
+.btun,
+.btn,
+#calculateButton,
+.btn-add,
+.btn-remove,
+.btn-share,
+.btn-calculate {
+    transition: background 0.3s, transform 0.1s; /* Smooth transition for background and transform */
+}
 
+/* Active state for buttons */
+.download-btn:active,
+.info-btn:active,
+.send-btn:active,
+.bttn:active,
+.bton:active,
+.bten:active,
+.btun:active,
+.btn:active,
+#calculateButton:active,
+.btn-add:active,
+.btn-remove:active,
+.btn-share:active,
+.btn-calculate:active {
+    transform: scale(0.95); /* Slightly reduce size on press */
+   /* Change gradient on press */
+}
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
