@@ -31,6 +31,7 @@
             margin-bottom: 20px;
             font-size: 28px;
             font-weight: 700;
+            text-align: center;
         }
         .form-group {
             margin: 15px 0;
@@ -103,11 +104,18 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px; /* Rounded corners */
 }
 
+@media (max-width: 768px) {
+        .card-title {
+                font-size: medium;
+                text-align:left;
+        }
+}
+
     </style>
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">GPA To Percentage<span style="font-size: 16px;"> (General Method)</span></div>
+        <div class="logo">GPA To %<span style="font-size: 16px;"> (General Method)</span></div>
         <div class="nav-actions"></div>
         <a href="index.html" class="contact-link">Home</a>
     </header>
@@ -117,7 +125,7 @@ input[type=number]::-webkit-outer-spin-button {
         <br>
         <div class="card">
             <div class="card-content">
-                <h2 style="text-align: center;" class="card-title">GPA To Percentage Converter</h2>
+                <h2 class="card-title">GPA To Percentage Converter</h2>
                 <div class="form-group">
                     <label for="conversionType">Choose Conversion Type:</label>
                     <select id="conversionType">
