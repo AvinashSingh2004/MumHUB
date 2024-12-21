@@ -21,16 +21,24 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
+            
         }
         th, td {
             border: 1px solid #f4f4f4;
             padding: 8px; /* Reduced padding for smaller cells */
             text-align: center;
+        
         }
         th {
             background-color: #7ed1ea;
-            color: #000;
+            color: #000000;
         }
+
+        td {
+            background-color: #f4f4f4;
+            border: #f4f4f4;
+        }
+
         td, a {
             text-decoration: none;
         }
@@ -45,7 +53,7 @@
     background-color: #1e1e1e; /* Dark background for the table */
       }
 
-body.dark-theme th, td {
+body.dark-theme th, body.dark-theme td {
     border: 1px solid #444; /* Darker border for better visibility */
     padding: 8px; /* Reduced padding for smaller cells */
     text-align: center;
