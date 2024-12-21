@@ -173,12 +173,31 @@
             margin-top: 15px;
         }
 
+    h2 {
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Add left margin for indentation */
+    color: #000000; /* Optional: Change color to match the theme */
+}
+        .p {
+    font-size: 16px; /* Set a comfortable font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #333; /* Dark gray color for text */
+    margin: 15px 20px; /* Add margin for spacing */
+    text-align: left; /* Align text to the left */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-left: 4px solid #02c0ff; /* Left border for emphasis */
+    padding: 10px 15px; /* Padding for inner spacing */
+    border-radius: 5px; /* Rounded corners */
+}
         @media (max-width: 768px) {
     .card {
         width: 95%; /* Adjust card width for mobile */
         padding: 10px; /* Reduce padding */
     }
-
+     
+    .card-title {
+        font-size: 24px;
+    }
     .credit-input, .grade-input {
         width: 60px; /* Full width for inputs */
         max-width: none; /* Remove max width */
@@ -222,6 +241,12 @@
         <br>
         <div id="cgpaResults"></div>
             <div id="percentcontainer"></div>
+            <br>
+            <h2>About this Tool</h2>
+            <p class="p">Introducing the ultimate GPA Calculator! Easily calculate your SGPA, CGPA, and convert GPA to percentage. Customize your grading system to suit your institution's needs.
+                <br>Key Features: Add and remove semesters as needed, Add and remove subjects with ease, Customizable grading system, Calculate SGPA, CGPA, and GPA to percentage, Simple and user-friendly interface.
+                
+                <br>Perfect for students, educators, and institutions, our GPA Calculator saves you time and effort. Accurately track your academic progress and make informed decisions about your education. Try our GPA Calculator today and take control of your academic journey!</p>
     </main>
     <script src="Grading.js" defer></script>
     <script>
