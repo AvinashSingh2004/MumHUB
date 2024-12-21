@@ -354,7 +354,7 @@ footer.footer.dark-theme {
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header.navbar {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: row; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start */
     }
 
