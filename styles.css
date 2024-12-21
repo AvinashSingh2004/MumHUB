@@ -17,7 +17,7 @@ body {
 }
 
 /* Navbar Styles */
-header.navbar {
+.navbar {
     width: 100%;
     background-color: #7ed1ea;
     padding: 10px 5%;
@@ -171,6 +171,22 @@ header.navbar {
     font-size: 0.9rem;
     transition: 0.3s;
 }
+
+.home-link {
+    text-decoration: none; /* Remove underline */
+    color: #000000; /* Default color */
+    font-size: 1.5rem; /* Adjust size */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.home-link:hover {
+    opacity: 0.6;
+    color: #2a2e30;
+}
+
+.home-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
 /* Heading Styles (contact.html) */
 .contact-form h2 {
     margin-bottom: 20px; /* Space below the heading */
@@ -249,7 +265,7 @@ header.navbar {
     display: block;
     padding: 10px; /* Padding for clickable area */
     text-decoration: none;
-    color: #51a6bf; /* Link color */
+    color: #000000; /* Link color */
     transition: background-color 0.3s; 
 }
 
@@ -267,26 +283,30 @@ header.navbar {
 
 #theme-icon {
     font-size: 24px; /* Increase the icon size for better visibility */
-    color: #ffffff; /* Default color for the icon in dark theme */
+    color: #121212; /* Default color for the icon in dark theme */
     transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
 }
 
 #theme-icon:hover {
-    color: #7ed1ea; /* Change color on hover for better interaction */
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+    opacity: 0.6;
+    color: #5bb8e4;
 }
+   
 #theme-icon.fas.fa-sun:hover {
-    color: #121212;
+    opacity: 0.6;
+    color: #2a2e30;
 }
+
+#theme-icon.fas.fa-moon {
+    color: #7ed1ea;
+}
+
 
 /* Default styles for header text */
 
 /* Dark theme styles for the header */
 
-header.navbar.dark-theme {
-    background-color: #1e1e1e; /* Dark background for the header */
-    color: #7ed1ea; /* Change text color to #7ed1ea */
-}
+
 
 /* Default styles for the logo */
 .logo span {
@@ -305,23 +325,30 @@ header.navbar.dark-theme .logo {
 header.navbar.dark-theme .contact-link {
     color: #7ed1ea; /* Change link color to #7ed1ea */
 }
-header.navbar {
-    color: #000; /* Default text color */
+
+header.navbar.dark-theme .home-link{
+    color: #7ed1ea;
 }
+
+header.navbar.dark-theme .home-link:hover {
+    opacity: 0.6;
+    color: #5bb8e4;
+}
+
 
 /* Dark theme styles */
 body.dark-theme {
-    background-color: #121212; /* Dark background */
+    background: linear-gradient(135deg, #2a2a2a, #000000); 
     color: #ffffff; /* Light text */
 }
 
-header.navbar.dark-theme {
-    background-color: #1e1e1e; /* Dark navbar */
-    color: #ffffff; /* Light text for header */
+body.dark-theme header.navbar {
+        background: linear-gradient(135deg, #2a2a2a, #000000); /* Blue to black */
+        color: #ffffff; /* Light text for header */
 }
 
 footer.footer.dark-theme {
-    background-color: #1e1e1e; /* Dark footer */
+    background: linear-gradient(135deg, #2a2a2a, #000000); 
     color: #ffffff;
 }
 
@@ -342,14 +369,12 @@ body.dark-theme svg {
 
 /* Footer styles */
 footer.footer {
+    padding: 1rem;
     background-color: #f9f9f9; /* Light theme footer */
     color: #000; /* Default text color */
 }
 
-footer.footer.dark-theme {
-    background-color: #1e1e1e; /* Dark theme footer */
-    color : #ffffff; /* Light text for footer in dark theme */
-}
+
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -398,6 +423,9 @@ footer.footer.dark-theme {
         padding: 15px; /* Adjust padding */
     }
     .contact-link {
+        margin:5px 0;
+    }
+    .home-link {
         margin:5px 0;
     }
     .footer {

@@ -6,8 +6,10 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>GPA to Percentage</title>
+    <script src="theme.js"></script>
     <link rel="icon" href="mulogo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         .card {
@@ -165,8 +167,10 @@ body.dark-theme .p {
 <body>
     <header class="navbar">
         <div class="logo">GPA To %<span style="font-size: 16px;"> (General Method)</span></div>
-        <div class="nav-actions"></div>
-        <a href="index.html" class="contact-link">Home</a>
+        <div class="nav-actions">
+        <a href="index.html" class="home-link">
+                <i class="fas fa-home"></i> <!-- Home icon -->
+            </a></div>
     </header>
     <br> 
     <main>
@@ -302,6 +306,6 @@ body.dark-theme .p {
         // Initialize placeholder on page load
         updatePlaceholder();
     </script>
-    <script src="theme.js" defer></script>
+    
 </body>
 </html>

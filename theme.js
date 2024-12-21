@@ -9,12 +9,8 @@ function toggleTheme() {
         }
     
         // Save the theme preference in local storage
-        if (body.classList.contains('dark-theme')) {
-            localStorage.setItem('theme', 'dark'); // Save theme preference
-        } else {
-            localStorage.setItem('theme', 'light'); // Save theme preference
-        }
-    }
+        localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+}
     
     // Function to load the theme on page load
     function loadTheme() {

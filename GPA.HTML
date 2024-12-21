@@ -7,7 +7,9 @@
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>GPA Calculator</title>
     <link rel="icon" href="mulogo.png" type="image/png">
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -325,7 +327,10 @@ body.dark-theme .p {
     <header class="navbar">
         <div class="logo">Calculate Your GPA</div>
         <div class="nav-actions">
-        <a href="index.html" class="contact-link">Home</a></div>
+            <a href="index.html" class="home-link">
+                <i class="fas fa-home"></i> <!-- Home icon -->
+            </a>
+        </div>
     </header>
 
     <main>
@@ -686,7 +691,7 @@ function displayPercentageResults(type, gpa, gpaPercentage) {
     resultsDiv.appendChild(percentageCard);
 }
     </script>
-    <script src="theme.js" defer></script>
+    
 </body>
 </html>
 

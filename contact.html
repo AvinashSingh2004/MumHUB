@@ -4,10 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="mulogo.png" type="image/png">
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>Contact</title>
     
+    <style>
+        #theme-toggle, #theme-icon {
+          display: none;
+        }
+  
+  /* Dark theme styles */
+  body.dark-theme .contact-form {
+      background-color: #2a2a2a; /* Dark background for the form */
+      color: #ffffff; /* White text for better contrast */
+      box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+  }
+  
+  body.dark-theme .contact-link {
+      color: #ffffff; /* White text for links in dark theme */
+  }
+  
+  body.dark-theme .contact-form h2 {
+      color: #ffffff; /* White text for heading in dark theme */
+  }
+  
+  body.dark-theme .contactform input[type="text"],
+  body.dark-theme .contactform input[type="email"] {
+      border: 1px solid #444; /* Darker border for better visibility */
+      background-color: #1e1e1e; /* Dark background for inputs */
+      color: #ffffff; /* White text for inputs */
+  }
+  
+  body.dark-theme .contactform input[type="text"]:focus,
+  body.dark-theme .contactform input[type="email"]:focus {
+      border-color: #0098cb; /* Change border color on focus */
+  }
+  
+  body.dark-theme .send-btn {
+      background-color: #02c0ff; /* Button background color for dark theme */
+  }
+  
+  body.dark-theme .send-btn:hover {
+      background-color: #0056b3; /* Darker shade on hover for dark theme */
+  }
+  
+          input, textarea {
+              width: 100%;
+              padding: 12px;
+              margin-bottom: 20px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              font-size: 1rem;
+              transition: border-color 0.3s;
+          }
+          input:focus, textarea:focus {
+              border-color: #7ed1ea;
+              outline: none;
+          }
+      </style>
+  
 </head>
 <body>
 
@@ -18,7 +75,9 @@
             <button id="theme-toggle" onclick="toggleTheme()">
                 <i id="theme-icon" class="fas fa-sun"></i> <!-- Default to sun icon -->
             </button>
-            <a href="index.html" class="contact-link">Home</a>
+            <a href="index.html" class="home-link">
+                <i class="fas fa-home"></i> <!-- Home icon -->
+            </a>
         </div>
     </header>
 
@@ -73,61 +132,7 @@
         });
 
     </script>
-    <style>
-      #theme-toggle, #theme-icon {
-        display: none;
-      }
+   
 
-/* Dark theme styles */
-body.dark-theme .contact-form {
-    background-color: #2a2a2a; /* Dark background for the form */
-    color: #ffffff; /* White text for better contrast */
-    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
-}
-
-body.dark-theme .contact-link {
-    color: #ffffff; /* White text for links in dark theme */
-}
-
-body.dark-theme .contact-form h2 {
-    color: #ffffff; /* White text for heading in dark theme */
-}
-
-body.dark-theme .contactform input[type="text"],
-body.dark-theme .contactform input[type="email"] {
-    border: 1px solid #444; /* Darker border for better visibility */
-    background-color: #1e1e1e; /* Dark background for inputs */
-    color: #ffffff; /* White text for inputs */
-}
-
-body.dark-theme .contactform input[type="text"]:focus,
-body.dark-theme .contactform input[type="email"]:focus {
-    border-color: #0098cb; /* Change border color on focus */
-}
-
-body.dark-theme .send-btn {
-    background-color: #02c0ff; /* Button background color for dark theme */
-}
-
-body.dark-theme .send-btn:hover {
-    background-color: #0056b3; /* Darker shade on hover for dark theme */
-}
-
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        input:focus, textarea:focus {
-            border-color: #7ed1ea;
-            outline: none;
-        }
-    </style>
-
-<script src="theme.js" defer></script>
 </body>
 </html>
