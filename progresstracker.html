@@ -6,6 +6,7 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Progress Tracker</title>
+    <link rel="icon" href="mulogo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600&display=swap" rel="stylesheet">
    
@@ -184,7 +185,25 @@ td:hover {
             width: 100%;
             height: 100%;
         }
-.p {
+        
+        h2 {
+    text-align: left; /* Align text to the left */
+    margin-left: 20px; /* Add left margin for indentation */
+    color: #000000; /* Optional: Change color to match the theme */
+}
+        .p {
+    font-size: 16px; /* Set a comfortable font size */
+    line-height: 1.6; /* Increase line height for better readability */
+    color: #333; /* Dark gray color for text */
+    margin: 15px 20px; /* Add margin for spacing */
+    text-align: left; /* Align text to the left */
+    background-color: #f9f9f9; /* Light background for contrast */
+    border-left: 4px solid #02c0ff; /* Left border for emphasis */
+    padding: 10px 15px; /* Padding for inner spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#p {
     text-align: center;
 }
 
@@ -242,8 +261,8 @@ td:hover {
             <a href="index.html" class="contact-link">Home</a>
         </nav>
     </header>
-    <br><p class="p" style="font-weight: bold;">"Optimal experience on desktop"</p><br>
-    <p class="p">"Track module completion status with joy :)"</p><br>
+    <br><p id="p" style="font-weight: bold;">"Optimal experience on desktop"</p><br>
+    <p id="p">"Track module completion status with joy :)"</p><br>
 <div style="text-align: center;" class="button-container">
         <button class="btn btn-add" onclick="addCourse()">+ Course</button>
         <button class="btn btn-add" onclick="addModule()">+ Mod</button>
@@ -283,6 +302,26 @@ td:hover {
         <button class="btn btn-calculate" onclick="calculatePercentage()">Calculate Progress</button><br>
        <br><p id="percentage">Total Progress: 0%</p>
     </div>
+<br>
+<br>
+<h2>About this Tool</h2>
+<p class="p">
+Introducing Progress Tracking! Monitor your progress and stay on top of your coursework with our easy-to-use tool.
+<br>
+<strong>Key Features:
+Track completed and pending modules,
+Calculate total modules completed from total courses,
+Get your progress percentage instantly,
+Simple and intuitive interface.<br></strong>
+
+Perfect for students, learners, and professionals, Progress Tracking helps you:
+
+Stay organized and focused
+Set realistic goals and deadlines
+Celebrate your progress and achievements
+
+Try Progress Tracking today and take control of your learning journey!
+</p>
 
     <script>
         let progressNeedsUpdate = true;
