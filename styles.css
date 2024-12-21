@@ -71,6 +71,7 @@ header.navbar {
 .buttons-container {
     display: flex; /* Use flexbox for layout */
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 30px;
     flex-wrap: wrap; /* Allow wrapping */
