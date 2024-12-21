@@ -191,6 +191,110 @@
     padding: 10px 15px; /* Padding for inner spacing */
     border-radius: 5px; /* Rounded corners */
 }
+
+         /* Dark theme styles */
+body.dark-theme {
+    background-color: #121212; /* Dark background for body */
+    color: #ffffff; /* White text for body */
+}
+
+body.dark-theme .card {
+    background-color: #1e1e1e; /* Dark background for the card */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+}
+
+body.dark-theme .credit-input {
+    border: 1px solid #444; /* Darker border for input */
+    background-color: #2a2a2a; /* Dark background for input */
+    color: #ffffff; /* White text for input */
+}
+
+body.dark-theme .credit-input:focus {
+    border-color: #0098cb; /* Change border color on focus */
+}
+
+body.dark-theme table {
+    border-collapse: collapse;
+    margin: 10px auto;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+}
+
+body.dark-theme th, 
+body.dark-theme td {
+    border: 1px solid #444; /* Darker border for table cells */
+    padding: 10px;
+    text-align: center;
+}
+
+body.dark-theme th {
+    background-color: #7ed1ea; /* Light background for header */
+    color: #000; /* Black text for header */
+}
+
+body.dark-theme .grade-input {
+    border: 1px solid #444; /* Darker border for grade input */
+    background-color: #2a2a2a; /* Dark background for grade input */
+    color: #ffffff; /* White text for grade input */
+}
+
+body.dark-theme .grade-input:focus {
+    border-color: #0098cb; /* Change border color on focus */
+}
+
+body.dark-theme .bttn,
+body.dark-theme .bton,
+body.dark-theme .bten,
+body.dark-theme .btun,
+body.dark-theme .btn {
+    color: #ffffff; /* White text for buttons */
+    border-radius: 5px; /* Rounded corners */
+}
+
+body.dark-theme .bttn {
+    color: #000;
+    background-color: #02c0ff; /* Blue background for button */
+}
+
+body.dark-theme .bton {
+    color:black ;
+    border-color: whitesmoke;
+    background-color: #4caf50; /* Green background for button */
+}
+
+body.dark-theme .bten {
+    border-color: whitesmoke;
+    background-color: #f44336; /* Red background for button */
+}
+
+body.dark-theme .btun {
+    border-color: whitesmoke;
+    background-color: #f44336; /* Red background for button */
+}
+
+body.dark-theme .btn {
+    color: #000;
+    border-color:whitesmoke;
+    background-color: #02c0ff; /* Blue background for button */
+}
+
+body.dark-theme .btn:hover {
+    opacity: 0.8; /* Slightly transparent on hover */
+}
+
+body.dark-theme h2 {
+    color: #ffffff; /* White text for heading */
+}
+
+body.dark-theme .p {
+    color: #ffffff; /* White text for paragraph */
+    background-color: #2a2a2a; /* Dark background for paragraph */
+    border-left: 4px solid #02c0ff; /* Left border for emphasis */
+}
+
+
+
+
         @media (max-width: 768px) {
     .card {
         width: 95%; /* Adjust card width for mobile */
@@ -220,8 +324,8 @@
 <body>
     <header class="navbar">
         <div class="logo">Calculate Your GPA</div>
-        <div class="nav-actions"></div>
-        <a href="index.html" class="contact-link">Home</a>
+        <div class="nav-actions">
+        <a href="index.html" class="contact-link">Home</a></div>
     </header>
 
     <main>
@@ -582,6 +686,7 @@ function displayPercentageResults(type, gpa, gpaPercentage) {
     resultsDiv.appendChild(percentageCard);
 }
     </script>
+    <script src="theme.js" defer></script>
 </body>
 </html>
 

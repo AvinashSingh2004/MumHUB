@@ -257,6 +257,100 @@ header.navbar {
     background-color: #f1f1f1; /* Highlight on hover */
 }
 
+#theme-toggle {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+#theme-icon {
+    font-size: 24px; /* Increase the icon size for better visibility */
+    color: #ffffff; /* Default color for the icon in dark theme */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for color and transform */
+}
+
+#theme-icon:hover {
+    color: #7ed1ea; /* Change color on hover for better interaction */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+#theme-icon.fas.fa-sun:hover {
+    color: #121212;
+}
+
+/* Default styles for header text */
+
+/* Dark theme styles for the header */
+
+header.navbar.dark-theme {
+    background-color: #1e1e1e; /* Dark background for the header */
+    color: #7ed1ea; /* Change text color to #7ed1ea */
+}
+
+/* Default styles for the logo */
+.logo span {
+    color: #000; /* Default color for the .site part */
+}
+
+/* Dark theme styles for the logo */
+header.navbar.dark-theme .logo span {
+    color: #7ed1ea; /* Change color to #7ed1ea in dark theme */
+}
+
+header.navbar.dark-theme .logo {
+    color: #7ed1ea; 
+}
+/* Ensure the text color for links in the header is also updated */
+header.navbar.dark-theme .contact-link {
+    color: #7ed1ea; /* Change link color to #7ed1ea */
+}
+header.navbar {
+    color: #000; /* Default text color */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+header.navbar.dark-theme {
+    background-color: #1e1e1e; /* Dark navbar */
+    color: #ffffff; /* Light text for header */
+}
+
+footer.footer.dark-theme {
+    background-color: #1e1e1e; /* Dark footer */
+    color: #ffffff;
+}
+
+/* Change SVG image color in dark theme */
+img.university-logo {
+    filter: brightness(1) invert(0);
+}
+
+svg {
+    fill: #000; /* Default color for light theme */
+    transition: fill 0.3s; /* Smooth transition for color change */
+}
+
+/* Dark theme styles */
+body.dark-theme svg {
+    fill: #fff; /* Change color for dark theme */
+}
+
+/* Footer styles */
+footer.footer {
+    background-color: #f9f9f9; /* Light theme footer */
+    color: #000; /* Default text color */
+}
+
+footer.footer.dark-theme {
+    background-color: #1e1e1e; /* Dark theme footer */
+    color : #ffffff; /* Light text for footer in dark theme */
+}
+
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {
     header.navbar {
@@ -327,3 +421,4 @@ img {
     max-width: 100%;
     height: auto;
 }
+

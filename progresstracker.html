@@ -207,6 +207,122 @@ td:hover {
     text-align: center;
 }
 
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #121212; /* Dark background for body */
+    color: #ffffff; /* White text for body */
+}
+
+body.dark-theme header h1 {
+    color: #ffffff; /* White text for header */
+}
+
+body.dark-theme h4 {
+    color: #ffffff; /* White text for h4 */
+}
+
+body.dark-theme table {
+    background-color: #1e1e1e; /* Dark background for table */
+    border: 1px solid #444; /* Dark border for table */
+}
+
+body.dark-theme th {
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Dark gradient for header */
+    color: #ffffff; /* White text for header */
+}
+
+body.dark-theme td {
+    background-color: #2a2a2a; /* Dark background for table cells */
+    color: #ffffff; /* White text for table cells */
+}
+
+body.dark-theme .course-input {
+    background-color: #1e1e1e; /* Dark background for input area */
+    border: 1px solid #444; /* Dark border */
+}
+
+body.dark-theme .course-input label {
+    color: #ffffff; /* White text for labels */
+}
+
+body.dark-theme .course-input input[type="text"],
+body.dark-theme .course-input input[type="number"],
+body.dark-theme .course-input select {
+    background-color: #2a2a2a; /* Dark background for inputs */
+    border: 1px solid #444; /* Dark border for inputs */
+    color: #ffffff; /* White text for inputs */
+}
+
+body.dark-theme .course-input input:focus,
+body.dark-theme .course-input select:focus {
+    border-color: #10b0e6; /* Change border color on focus */
+}
+
+body.dark-theme .course-input button {
+    background-color: #007BFF; /* Button background color */
+    color: #ffffff; /* White text */
+}
+
+body.dark-theme .course-input button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+body.dark-theme .done {
+    background-color: #76c979; /* Green background for done items */
+}
+
+body.dark-theme .not-done {
+    background-color: #da564d; /* Red background for not done items */
+}
+
+body.dark-theme .button-container {
+    text-align: center;
+    margin:  10px 0;
+}
+
+body.dark-theme .btn {
+    background-color: #02c0ff; /* Button background color */
+    color: #ffffff; /* White text */
+}
+
+body.dark-theme .btn-add {
+    background-color: #4caf50; /* Green background for add button */
+}
+
+body.dark-theme .btn-remove {
+    background-color: #f44336; /* Red background for remove button */
+}
+
+body.dark-theme .btn-share, 
+body.dark-theme .btn-calculate {
+    background-color: #0098cb; /* Cyan background for share and calculate buttons */
+}
+
+body.dark-theme #percentage {
+    color: #ffffff; /* White text for percentage */
+}
+
+body.dark-theme .editable {
+    background-color: #2a2a2a; /* Dark background for editable fields */
+    border: 1px solid #444; /* Dark border */
+    color: #ffffff; /* White text */
+}
+
+body.dark-theme h2 {
+    color: #ffffff; /* White text for heading */
+}
+
+body.dark-theme .p {
+    color: #ffffff; /* White text for paragraph */
+    background-color: #2a2a2a; /* Dark background for paragraph */
+    border-left: 4px solid #02c0ff; /* Left border for emphasis */
+}
+
+
+
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     table {
@@ -254,12 +370,10 @@ td:hover {
     </style>
 </head>
 <body>
-    <header class="navbar">
-       
-        <h1>Progress Tracking</h1>
-        <nav>
-            <a href="index.html" class="contact-link">Home</a>
-        </nav>
+        <header class="navbar">
+            <div class="logo">Progress Tracking</div>
+            <div class="nav-actions"></div>
+            <a href="index.html" class="contact-link">Home</a>     
     </header>
     <br><p id="p" style="font-weight: bold;">"Optimal experience on desktop"</p><br>
     <p id="p">"Track module completion status with joy :)"</p><br>
@@ -479,6 +593,7 @@ Try Progress Tracking today and take control of your learning journey!
             return document.querySelector('thead tr').children.length - 1;
         }
     </script>
+    <script src="theme.js" defer></script>
 </body>
 </html>
 

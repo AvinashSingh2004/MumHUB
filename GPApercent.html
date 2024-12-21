@@ -104,6 +104,55 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 5px; /* Rounded corners */
 }
 
+/* Dark theme styles */
+body.dark-theme .card {
+    background-color: #1e1e1e; /* Dark background for the card */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+}
+
+body.dark-theme .card-title {
+    color: #ffffff; /* White text for title in dark theme */
+}
+
+body.dark-theme label {
+    color: #ffffff; /* White text for labels in dark theme */
+}
+
+body.dark-theme select, 
+body.dark-theme input[type="number"] {
+    border: 1px solid #444; /* Darker border for inputs */
+    background-color: #2a2a2a; /* Dark background for inputs */
+    color: #ffffff; /* White text for inputs */
+}
+
+body.dark-theme select:focus, 
+body.dark-theme input[type="number"]:focus {
+    border-color: #10b0e6; /* Change border color on focus */
+}
+
+body.dark-theme #calculateButton {
+    background-color: #02c0ff; /* Button background color for dark theme */
+    color: white; /* Button text color */
+}
+
+body.dark-theme #calculateButton:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+body.dark-theme #result {
+    color: #ffffff; /* White text for result in dark theme */
+}
+
+body.dark-theme h2 {
+    color: #ffffff; /* White text for heading in dark theme */
+}
+
+body.dark-theme .p {
+    color: #ffffff; /* White text for paragraph in dark theme */
+    background-color: #2a2a2a; /* Dark background for paragraph */
+    border-left: 4px solid #02c0ff; /* Left border for emphasis */
+}
+
 @media (max-width: 768px) {
         .card-title {
                 font-size: 24px;
@@ -253,5 +302,6 @@ input[type=number]::-webkit-outer-spin-button {
         // Initialize placeholder on page load
         updatePlaceholder();
     </script>
+    <script src="theme.js" defer></script>
 </body>
 </html>

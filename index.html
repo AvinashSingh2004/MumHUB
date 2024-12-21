@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Readex Pro Font -->
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -25,6 +26,9 @@
                 <div class="search-results" id="search-results"></div>
             </div>
             <a href="contact.html" class="contact-link">Contact</a>
+            <button id="theme-toggle" onclick="toggleTheme()">
+                <i id="theme-icon" class="fas fa-sun"></i>
+            </button>
         </div>
     </header>
 
@@ -101,6 +105,62 @@
         resultsContainer.style.display = 'none'; // Hide the results
     }
 });
+
+function toggleTheme() {
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    const footer = document.querySelector('footer.footer');
+    const logo = document.querySelector('.university-logo');
+    const header = document.querySelector('header.navbar');
+
+    // Toggle dark theme class
+    body.classList.toggle('dark-theme');
+    footer.classList.toggle('dark-theme');
+    header.classList.toggle('dark-theme'); 
+
+    // Change icon based on theme
+    if (body.classList.contains('dark-theme')) {
+        themeIcon.classList.remove('fa-sun'); // Remove sun icon
+        themeIcon.classList.add('fa-moon'); // Add moon icon
+        logo.style.filter = 'brightness(0) invert(1)'; // Change logo color for dark theme
+        localStorage.setItem('theme', 'dark'); // Save theme preference
+    } else {
+        themeIcon.classList.remove('fa-moon'); // Remove moon icon
+        themeIcon.classList.add('fa-sun'); // Add sun icon
+        logo.style.filter = 'none'; // Reset logo color for light theme
+        localStorage.setItem('theme', 'light'); // Save theme preference
+    }
+}
+
+// Function to load the theme on page load
+function loadTheme() {
+    const theme = localStorage.getItem('theme');
+    const body = document.body;
+    const themeIcon = document.getElementById('theme-icon');
+    const footer = document.querySelector('footer.footer');
+    const logo = document.querySelector('.university-logo');
+    const header = document.querySelector('header.navbar');
+
+    if (theme === 'dark') {
+        body.classList.add('dark-theme');
+        footer.classList.add('dark-theme');
+        header.classList.add('dark-theme'); 
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        logo.style.filter = 'brightness(0) invert(1)'; // Change logo color for dark theme
+    } else {
+        body.classList.remove('dark-theme');
+        footer.classList.remove('dark-theme');
+        header.classList.remove('dark-theme'); 
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        logo.style.filter = 'none'; // Reset logo color for light theme
+    }
+}
+
+// Call loadTheme on page load
+document.addEventListener('DOMContentLoaded', loadTheme);
+
     </script>
 </body>
 </html>

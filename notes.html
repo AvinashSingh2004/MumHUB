@@ -6,6 +6,7 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Notes & Stuffs</title>
+    <link rel="icon" href="mulogo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -40,6 +41,44 @@
                 text-decoration: none;
         }
        
+
+/* Dark theme styles */
+body.dark-theme {
+    background-color: #121212; /* Dark background for body */
+    color: #ffffff; /* White text for body */
+}
+
+body.dark-theme table {
+    background-color: #1e1e1e; /* Dark background for table */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+}
+
+body.dark-theme th {
+    background-color: #333; /* Darker background for header */
+    color: #ffffff; /* White text for header */
+}
+
+body.dark-theme th, 
+body.dark-theme td {
+    border: 1px solid #444; /* Darker border for table cells */
+}
+
+body.dark-theme td {
+    background-color: #2a2a2a; /* Dark background for table cells */
+    color: #ffffff; /* White text for table cells */
+}
+
+body.dark-theme a {
+    color: #0098cb; /* Link color that stands out against dark background */
+}
+
+body.dark-theme a:hover {
+    color: #4caf50; /* Change link color on hover for better interaction */
+}
+
+
+
+
  @media (max-width: 768px) {
     table {
         width: 90%; /* Full width on smaller screens */
@@ -172,3 +211,5 @@
                         </tr>
                     </tbody>
         </table><br>
+        <script src="theme.js" defer></script>
+        </body>
