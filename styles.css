@@ -77,22 +77,19 @@ button {
     cursor: pointer;
     border-radius: 8px;
     border: 2px solid transparent;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
     text-align: center;
 }
 
-
+button:hover {
+opacity: 0.9; /* Default hover opacity */
+transform: scale(1.02); /* Subtle zoom effect on hover */
+}
 /* Pressed effect */
 button:active, button.pressed {
     transform: scale(0.98); /* Press effect */
-    background-color: rgba(0, 0, 0, 0.1); /* Darker background */
 }
 
-/* Reset focus styles */
-button:focus {
-    outline: none;
-    box-shadow: none;
-}
 
 .buttons-container {
     display: flex; /* Use flexbox for layout */
@@ -478,6 +475,13 @@ footer.footer {
         flex-direction: row; /* Stack buttons vertically on mobile */
         align-items: center; /* Center buttons */
         justify-content: center;
+    }
+}
+
+@media (hover: none) {
+    button:hover {
+        opacity: 1; /* Reset hover opacity */
+        background-color: inherit; /* Reset hover background */
     }
 }
 
