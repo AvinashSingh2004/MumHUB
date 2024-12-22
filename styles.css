@@ -411,7 +411,7 @@ footer.footer {
     .nav-actions {
         flex-direction: row; 
         align-items: flex-start; /* Align items to the start */
-        width: 60%;
+        width: 100%;
     }
 
     .main-content {
@@ -451,7 +451,7 @@ footer.footer {
         margin:5px 0;
     }
     .home-link {
-        margin:-1px 0;
+        margin:-2px 0;
     }
 
     .footer {
