@@ -29,6 +29,7 @@ body {
     z-index: 1000;
 }
 
+
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
@@ -38,6 +39,18 @@ body {
     color: #000000;
     font-size: 1.2rem;
 }
+
+.specific-page.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+}
+
+.specific-page .logo span {
+    color: #000000;
+    font-size: 1.2rem;
+}
+
 
 .nav-actions {
     display: flex;
