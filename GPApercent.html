@@ -137,8 +137,9 @@ body.dark-theme #calculateButton {
     color: white; /* Button text color */
 }
 
-body.dark-theme #calculateButton:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+body.dark-theme #calculateButton:hover,
+body.dark-theme #calculateButton.clicked {
+    background-color: #008cb3; /* Darker shade on hover or clicked */
 }
 
 body.dark-theme #result {
@@ -234,75 +235,86 @@ body.dark-theme .p {
             document.getElementById('valueInput').value = ''; // Clear input on type change
         });
 
-        document.getElementById('calculateButton').addEventListener('click', function() {
-            const conversionType = document.getElementById('conversionType').value;
-            const value = parseFloat(document.getElementById('valueInput').value);
-            let resultText = '';
+        // Select the calculate button
+const calculateButton = document.getElementById('calculateButton');
 
-            // // Input validation for non-negative values
-            if (value < 0) {
-                resultText = 'Entered value cannot be negative.';
-            } else {
-                if (conversionType === 'gpaToPercentage') {
-                    const gradingScale = document.getElementById('gradingScale').value;
-                    let percentage;
+// Add click event listener
+calculateButton.addEventListener('click', function() {
+    // Add clicked class to simulate hover effect
+    calculateButton.classList.add('clicked');
 
-                    // Conversion logic based on grading scale
-                    switch (gradingScale) {
-                        case '4.0':
-                            percentage = (value * 100) / 4;
-                            break;
-                        case '5.0':
-                            percentage = value * 20;
-                            break;
-                        case '10.0':
-                            percentage = value * 9.5;
-                            break;
-                        case '10.0_MU':
-                            if (value < 7) {
-                                percentage = 7.1 * value + 12;
-                            } else {
-                                percentage = 7.4 * value + 12;
-                            }
-                            break;
-                        default:
-                            percentage = 0;
+    // Remove the clicked class after a short delay
+    setTimeout(() => {
+        calculateButton.classList.remove('clicked');
+    }, 100); // Adjust the duration as needed (300ms in this case)
+
+    const conversionType = document.getElementById('conversionType').value;
+    const value = parseFloat(document.getElementById('valueInput').value);
+    let resultText = '';
+
+    // Input validation for non-negative values
+    if (value < 0) {
+        resultText = 'Entered value cannot be negative.';
+    } else {
+        if (conversionType === 'gpaToPercentage') {
+            const gradingScale = document.getElementById('gradingScale').value;
+            let percentage;
+
+            // Conversion logic based on grading scale
+            switch (gradingScale) {
+                case '4.0':
+                    percentage = (value * 100) / 4;
+                    break;
+                case '5.0':
+                    percentage = value * 20;
+                    break;
+                case '10.0':
+                    percentage = value * 9.5;
+                    break;
+                case '10.0_MU':
+                    if (value < 7) {
+                        percentage = 7.1 * value + 12;
+                    } else {
+                        percentage = 7.4 * value + 12;
                     }
-
-                    resultText = `Converted Percentage: ${percentage.toFixed(2)}%`;
-                } else if (conversionType === 'percentageToGPA') {
-                    const gradingScale = document.getElementById('gradingScale').value;
-                    let gpa;
-
-                    // Conversion logic for percentage to GPA
-                    switch (gradingScale) {
-                        case '4.0':
-                            gpa = value / 25;
-                            break;
-                        case '5.0':
-                            gpa = value / 20;
-                            break;
-                        case '10.0':
-                            gpa = value / 9.5;
-                            break;
-                        case '10.0_MU':
-                            if (value < 61.7) {
-                                gpa = (value - 12) / 7.1;
-                            } else {
-                                gpa = (value - 12) / 7.4;
-                            }
-                            break;
-                        default:
-                            gpa = 0;
-                    }
-
-                    resultText = `Converted GPA : ${gpa.toFixed(2)}`;
-                }
+                    break;
+                default:
+                    percentage = 0;
             }
 
-            document.getElementById('result').innerText = resultText;
-        });
+            resultText = `Converted Percentage: ${percentage.toFixed(2)}%`;
+        } else if (conversionType === 'percentageToGPA') {
+            const gradingScale = document.getElementById('gradingScale').value;
+            let gpa;
 
+            // Conversion logic for percentage to GPA
+            switch (gradingScale) {
+                case '4.0':
+                    gpa = value / 25;
+                    break;
+                case '5.0':
+                    gpa = value / 20;
+                    break;
+                case '10.0':
+                    gpa = value / 9.5;
+                    break;
+                case '10.0_MU':
+                    if (value < 61.7) {
+                        gpa = (value - 12) / 7.1;
+                    } else {
+                        gpa = (value - 12) / 7.4;
+                    }
+                    break;
+                default:
+                    gpa = 0;
+            }
+
+            resultText = `Converted GPA: ${gpa.toFixed(2)}`;
+        }
+    }
+
+    document.getElementById('result').innerText = resultText;
+});
         // Initialize placeholder on page load
         updatePlaceholder();
 
