@@ -179,6 +179,7 @@ body {
     color: #000000; /* Default color */
     font-size: 1.5rem; /* Adjust size */
     transition: color 0.3s; /* Smooth transition for hover */
+    margin-right: -900px;
 }
 
 .home-link:hover {
@@ -450,6 +451,7 @@ footer.footer {
     }
     .home-link {
         margin:5px 0;
+        margin-right: 800px;
     }
     .footer {
         padding: 1rem; /* Adjust footer padding */
