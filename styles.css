@@ -262,7 +262,7 @@ body {
     width: 100%; /* Match the width of the search input */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    width: 200px;
+    width: 247px;
 }
 
 .search-results a {
@@ -360,6 +360,91 @@ body.dark-theme {
 body.dark-theme header.navbar {
         background: linear-gradient(135deg, #2a2a2a, #000000); /* Blue to black */
         color: #ffffff; /* Light text for header */
+}
+
+
+body.dark-theme .search-bar {
+    border-color:#5bb8e4; /* Darker border for search bar */
+    background: #2a2a2a; /* Dark background for search bar */
+}
+
+body.dark-theme .search-bar input {
+    padding: 5px 10px; /* Padding for input */
+    border:none; /* No border for input */
+    outline: none; /* No outline on focus */
+    width: 100%; /* Full width for input */
+    font-size: 0.9rem; /* Font size for input */
+    background-color: #2a2a2a; /* Dark background for input */
+    color: #ffffff; /* White text for input */
+}
+
+body.dark-theme .search-bar button {
+    padding: 5px 10px; /* Padding for button */
+    background-color: transparent; /* Transparent background for button */
+    color: #7ed1ea; /* White text for button */
+    border: none; /* No border for button */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+body.dark-theme .search-bar button:hover {
+    background-color: #444; /* Darker background on hover */
+}
+
+
+body.dark-theme .search-results {
+    display: none; /* Hide by default */
+    margin-top: 200px; /* Space between search bar and results */
+    position: absolute; /* Position it absolutely */
+    background-color: #1e1e1e; /* Dark background for visibility */
+    border: 1px solid #444; /* Darker border for the results */
+    z-index: 1000; /* Ensure it appears above other elements */
+    width: 60%; /* Match the width of the search input */
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
+    border-radius: 10px;
+    width: 247px;
+}
+
+body.dark-theme .search-results a {
+    color: #ffffff; /* White text for links in search results */
+}
+
+body.dark-theme .search-results a:hover {
+    background-color: #444; /* Darker background on hover for links */
+}
+
+/* Dark Theme Info Button */
+body.dark-theme .info-btn {
+    position: relative; /* Position relative for the pseudo-element */
+    background-color: #2a2a2a; /* Dark background for the button */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Bold font weight */
+    font-size: 0.8rem; /* Font size */
+    color: #ffffff; /* White text for better contrast */
+    text-align: center; /* Center text */
+    display: inline-block; /* Inline block for button */
+    width: auto; /* Auto width for button */
+    overflow: hidden; /* Hide overflow for the pseudo-element */
+}
+
+body.dark-theme .info-btn::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position absolute to overlay the button */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background: linear-gradient(135deg, #cbe7f1, #7ed1ea); /* Gradient background */
+    z-index: -1; /* Place behind the button */
+    border-radius: 25px; /* Match the button's border radius */
+    filter: brightness(0.8); /* Optional: adjust brightness for better contrast */
+}
+
+body.dark-theme .info-btn:hover {
+    background-color: #7ed1ea; /* Darker background on hover */
+    color: #000;
+    border: 1px solid #444;
 }
 
 body.dark-theme .download-btn {
