@@ -67,28 +67,7 @@ body {
     font-weight: 700;
 }
 
-/* Buttons Container */
-button {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 8px;
-    border: 2px solid transparent;
-    transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.2s ease;
-    text-align: center;
-}
 
-button:hover {
-opacity: 0.9; /* Default hover opacity */
-transform: scale(1.02); /* Subtle zoom effect on hover */
-}
-/* Pressed effect */
-button:active, button.pressed {
-    transform: scale(0.98); /* Press effect */
-}
 
 
 .buttons-container {
@@ -324,6 +303,17 @@ button:active, button.pressed {
     color: #7ed1ea;
 }
 
+@media (max-width: 768px) {
+    #theme-icon:hover {
+        opacity: 1; /* Reset opacity to default */
+        color: inherit; /* Reset color to default */
+    }
+
+    #theme-icon.fas.fa-sun:hover {
+        opacity: 1; /* Reset opacity to default */
+        color: inherit; /* Reset color to default */
+    }
+}
 
 /* Default styles for header text */
 
@@ -478,12 +468,7 @@ footer.footer {
     }
 }
 
-@media (hover: none) {
-    button:hover {
-        opacity: 1; /* Reset hover opacity */
-        background-color: inherit; /* Reset hover background */
-    }
-}
+
 
 img {
     max-width: 100%;
