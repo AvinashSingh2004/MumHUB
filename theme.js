@@ -35,7 +35,7 @@ function toggleTheme() {
     document.addEventListener('DOMContentLoaded', loadTheme);
 
     // Select all buttons and relevant elements
-const buttons = document.querySelectorAll('.download-btn, .info-btn, .send-btn, .bttn, .bton, .bten, .btun, .btn, #calculateButton, .btn-add, .btn-remove, .btn-share, .btn-calculate');
+const buttons = document.querySelectorAll('.download-btn, .info-btn, .send-btn, .bttn, .bton, .bten, .btnn, .btun, .btn, #calculateButton, .btn-add, .btn-remove, .btn-share, .btn-calculate');
 
 // Add touch event listeners to each button
 buttons.forEach(button => {

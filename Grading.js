@@ -33,7 +33,7 @@ function customizeGrading() {
             <div class="button-container">
                 <button class="btn" onclick="addGradingRow()">Add</button>
                 <button class="bten" onclick="undoLastRow()">Undo</button>
-                <button class="btn" style="background-color: #4caf50;" onclick="saveGrading()">Apply</button>
+                <button class="btnn" onclick="saveGrading()">Apply</button>
             </div>
         </div>
     `;

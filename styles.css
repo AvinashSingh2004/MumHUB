@@ -391,6 +391,7 @@ footer.footer {
 .bttn,
 .bton,
 .bten,
+.bttn,
 .btun,
 .btn,
 #calculateButton,
@@ -398,7 +399,7 @@ footer.footer {
 .btn-remove,
 .btn-share,
 .btn-calculate {
-    transition: background 0.3s, transform 0.1s; /* Smooth transition for background and transform */
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transition for background and transform */
 }
 
 /* Active state for buttons */
@@ -408,6 +409,7 @@ footer.footer {
 .bttn:active,
 .bton:active,
 .bten:active,
+.btnn:active,
 .btun:active,
 .btn:active,
 #calculateButton:active,
