@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="icon" href="mulogo.png" type="image/png">
     <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css">
@@ -130,6 +130,17 @@
                     document.getElementById('contact-form').reset();
                 });
         });
+
+        document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("touchstart", () => {
+        button.classList.add("pressed");
+    });
+
+    button.addEventListener("touchend", () => {
+        button.classList.remove("pressed");
+    });
+});
+
 
     </script>
    

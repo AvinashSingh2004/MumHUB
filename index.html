@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Mumbai University HUB</title>
@@ -176,23 +176,16 @@
     }
 });
 
-// Select all buttons and relevant elements
-const buttons = document.querySelectorAll('.download-btn, .info-btn, .send-btn, .bttn, .bton, .bten, .btun, .btn, #calculateButton, .btn-add, .btn-remove, .btn-share, .btn-calculate');
-
-// Add touch event listeners to each button
-buttons.forEach(button => {
-    button.addEventListener('touchstart', function() {
-        this.classList.add('active'); // Add active class on touch
+document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("touchstart", () => {
+        button.classList.add("pressed");
     });
 
-    button.addEventListener('touchend', function() {
-        this.classList.remove('active'); // Remove active class when touch ends
-    });
-
-    button.addEventListener('touchcancel', function() {
-        this.classList.remove('active'); // Remove active class if touch is canceled
+    button.addEventListener("touchend", () => {
+        button.classList.remove("pressed");
     });
 });
+
 
 
     </script>

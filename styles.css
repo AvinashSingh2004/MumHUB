@@ -68,6 +68,32 @@ body {
 }
 
 /* Buttons Container */
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+
+/* Pressed effect */
+button:active, button.pressed {
+    transform: scale(0.98); /* Press effect */
+    background-color: rgba(0, 0, 0, 0.1); /* Darker background */
+}
+
+/* Reset focus styles */
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .buttons-container {
     display: flex; /* Use flexbox for layout */
     justify-content: center;
@@ -384,42 +410,7 @@ footer.footer {
     color: #000; /* Default text color */
 }
 
-/* Common button styles */
-.download-btn,
-.info-btn,
-.send-btn,
-.bttn,
-.bton,
-.bten,
-.bttn,
-.btun,
-.btn,
-#calculateButton,
-.btn-add,
-.btn-remove,
-.btn-share,
-.btn-calculate {
-    transition: background-color 0.3s, transform 0.1s; /* Smooth transition for background and transform */
-}
 
-/* Active state for buttons */
-.download-btn:active,
-.info-btn:active,
-.send-btn:active,
-.bttn:active,
-.bton:active,
-.bten:active,
-.btnn:active,
-.btun:active,
-.btn:active,
-#calculateButton:active,
-.btn-add:active,
-.btn-remove:active,
-.btn-share:active,
-.btn-calculate:active {
-    transform: scale(0.95); /* Slightly reduce size on press */
-   /* Change gradient on press */
-}
 
 /* Media Queries for Mobile Responsiveness */
 @media (max-width: 768px) {

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <script src="theme.js"></script>
@@ -598,6 +598,17 @@ Try Progress Tracking today and take control of your learning journey!
         function getColumnCount() {
             return document.querySelector('thead tr').children.length - 1;
         }
+
+        document.querySelectorAll("button").forEach((button) => {
+    button.addEventListener("touchstart", () => {
+        button.classList.add("pressed");
+    });
+
+    button.addEventListener("touchend", () => {
+        button.classList.remove("pressed");
+    });
+});
+
     </script>
     
 </body>
