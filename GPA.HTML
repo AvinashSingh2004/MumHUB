@@ -50,11 +50,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Readex Pro', sans-serif;
+
+    :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --card-background: #fff;
+    --button-background: #0098cb;
+    --button-text: #ffffff;
+    --table-border: #f4f4f4;
+    --input-border: #ccc;
+    --input-focus-border: #0098cb;
+    --input-background: #fff;
+}
+
+ body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Readex Pro', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
         }
         .card {
-            background-color: #fff;
+            background-color: var(--card-background);
             border-radius: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -65,6 +81,7 @@
             align-items: center;
             width: 90%;
             width:650px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .card-content {
             width: 100%;
@@ -76,15 +93,17 @@
  .credit-input {
     width: 60px; /* Set a fixed width for the input */
     padding: 8px; /* Add some padding for better spacing */
-    border: 1px solid #ccc; /* Light gray border */
+    border: 1px solid var(--input-border); /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     font-size: 14px; /* Font size */
-    text-align: center; /* Center the text */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+    text-align: center;
+    background-color: var(--input-background);
+    color: var(--text-color); /* Center the text */
+    transition: border-color 0.3s,  background-color 0.3s; /* Smooth transition for border color */
 }
 
 .credit-input:focus {
-    border-color: #0098cb; /* Change border color on focus */
+    border-color: var(--input-focus-border); /* Change border color on focus */
     outline: none; /* Remove default outline */
     box-shadow: 0 0 5px rgba(0, 152, 203, 0.5); /* Add a subtle shadow */
 }
@@ -104,11 +123,13 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             overflow: hidden;
+            transition: box-shadow 0.3s ease;
         }
         th, td {
             border: 1px solid #f4f4f4;
             padding: 10px;
             text-align: center;
+            transition: border-color 0.3s ease;
         }
         th {
             background-color: #7ed1ea;
@@ -119,17 +140,17 @@
     width: 60px; /* Full width */
     max-width: 60px;
     padding: 10px; /* Padding for better spacing */
-    border: 1px solid #ccc; /* Light gray border */
+    border: 1px solid var(--input-border); /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     font-size: 14px; /* Font size */
-    color: #333; /* Dark text color */
-    background-color: #fff; /* White background */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transition for border color and shadow */
+    background-color: var(--input-background);
+    color: var(--text-color);
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for border color and shadow */
 }
 
 /* Change border color and add shadow on focus */
 .grade-input:focus {
-    border-color: #0098cb; /* Change border color on focus */
+    border-color: var(--input-focus-border); /* Change border color on focus */
     outline: none; /* Remove default outline */
     box-shadow: 0 0 5px rgba(0, 152, 203, 0.5); /* Add a subtle shadow */
 }
@@ -153,63 +174,86 @@
     cursor: not-allowed; /* Change cursor to indicate disabled */
 }
         
-        .bttn {
-            margin: 5px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-color: #0098cb;
-            border-radius: 5px;
-            color: #000000;
-            background-color:#7ed1ea;
-            width:170px
- }
 
-        .bton { margin: 5px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-color: #4caf50;
-            border-radius: 5px;
-            color: #4caf50;
-            background-color: #ffffff;
-            
-        }
-        .bten {
-            margin: 5px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-color:#f44336;
-            border-radius: 5px;
-            color:#f44336;
-            background-color:#ffffff;
-        }
-        .btun {
-            margin: 5px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-color:black;
-            border-radius: 5px;
-            color: #fff;
-            background-color:#f44336;
-        }
-        .btn {
-            margin: 5px;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-color:black;
-            border-radius: 5px;
-            color: #fff;
-            background-color: #0098cb;
-            text-align: center;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            opacity: 0.8;
-        }
+button {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 20px; /* Increased padding for better aesthetics */
+    font-size: 14px;
+    font-weight: 500; /* Slightly bold for better readability */
+    cursor: pointer;
+    border-radius: 8px; /* Smoother rounded corners */
+    border: 2px solid transparent; /* Consistent border width */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    text-align: center;
+}
+    /* Button Variants for Light Theme */
+.bttn {
+    background-color: #7ed1ea;
+    color: #000000;
+    border-color: #0098cb;
+}
+
+.bton {
+    background-color: #ffffff;
+    color: #4caf50;
+    border-color: #4caf50;
+}
+
+.bten {
+    background-color: #ffffff;
+    color: #f44336;
+    border-color: #f44336;
+}
+
+.btun {
+    background-color: #f44336;
+    color: #ffffff;
+    border-color: #f44336;
+}
+
+.btn {
+    background-color: #0098cb;
+    color: #ffffff;
+    border-color: #0098cb;
+}
+
+.btnn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border-color: #4caf50;
+}
+
+/* Hover States */
+button:hover {
+    opacity: 0.9; /* Slight dim effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.bttn:hover {
+    background-color: #66c3dd; /* Slightly darker blue */
+}
+    
+.bton:hover {
+    background-color: #4caf50;
+    color: #ffffff;
+}
+
+.bten:hover {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.btun:hover {
+    background-color: #d32f2f; /* Darker red */
+}
+
+.btn:hover {
+    background-color: #0078a7; /* Darker blue */
+}
+.btnn:hover {
+    background-color:  #4caf50; /* Darker blue */
+}
         .button-container {
             text-align: center;
             margin-top: 15px;
@@ -233,6 +277,21 @@
 }
 
          /* Dark theme styles */
+
+ body.dark-theme {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --card-background: #1e1e1e;
+    --button-background: #02c0ff;
+    --button-text: #000000;
+    --table-border: #444;
+    --input-border: #444;
+    --input-focus-border: #0098cb;
+    --input-background: #2a2a2a;
+}
+
+
+
 body.dark-theme {
     background-color: #121212; /* Dark background for body */
     color: #ffffff; /* White text for body */
@@ -282,44 +341,66 @@ body.dark-theme .grade-input:focus {
     border-color: #0098cb; /* Change border color on focus */
 }
 
-body.dark-theme .bttn,
-body.dark-theme .bton,
-body.dark-theme .bten,
-body.dark-theme .btun,
-body.dark-theme .btn {
-    color: #ffffff; /* White text for buttons */
-    border-radius: 5px; /* Rounded corners */
-}
-
+/* Dark Theme Button Styles */
 body.dark-theme .bttn {
-    color: #000;
-    background-color: #02c0ff; /* Blue background for button */
+    background: linear-gradient(135deg, #6eeeff, #00a1b5);
+    color: #121212;
+    border:none;
 }
 
 body.dark-theme .bton {
-    color:black ;
-    border-color: whitesmoke;
-    background-color: #4caf50; /* Green background for button */
+    background-color: #1e1e1e;
+    color: #4caf50;
+    border-color: #4caf50;
 }
 
 body.dark-theme .bten {
-    border-color: whitesmoke;
-    background-color: #f44336; /* Red background for button */
+    background-color:#1e1e1e;
+    color: #f44336;
+    border-color: #f44336;
+}
+
+body.dark-theme .btnn {
+    background-color: #4caf50; 
+    color: #ffffff;
+    border-color: #4caf50;
 }
 
 body.dark-theme .btun {
-    border-color: whitesmoke;
-    background-color: #f44336; /* Red background for button */
+    background-color: #d32f2f;
+    color: #ffffff;
+    border-color: #d32f2f;
 }
 
 body.dark-theme .btn {
-    color: #000;
-    border-color:whitesmoke;
-    background-color: #02c0ff; /* Blue background for button */
+    background-color: #6eeeff; /* Cyan */
+    color: #000000;
+    border-color: #6eeeff;
+}
+
+
+
+/* Dark Theme Hover States */
+body.dark-theme button:hover {
+    opacity: 0.9;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1); /* Subtle shadow for dark theme */
+}
+
+body.dark-theme .bttn:hover {
+    background-color: #1c86d1; /* Slightly darker blue */
 }
 
 body.dark-theme .btn:hover {
-    opacity: 0.8; /* Slightly transparent on hover */
+    background-color: #00a1b5; /* Darker cyan */
+}
+
+body.dark-theme .bton:hover {
+    background-color: #4caf50; 
+    color: #1e1e1e;
+}
+body.dark-theme .bten:hover {
+    background-color: #f44336; 
+    color: #1e1e1e;
 }
 
 body.dark-theme h2 {
@@ -355,7 +436,7 @@ body.dark-theme .p {
         padding: 8px; /* Reduce padding in table cells */
     }
 
-    .bttn, .bton, .bten, .btun, .btn {
+    .bttn, .bton, .bten, .btun, .btn, .btnn {
         font-size: 12px; /* Smaller font size for buttons */
     }
 }
@@ -383,7 +464,7 @@ body.dark-theme .p {
         <div id="semesters"></div>
         <div class="button-container">
             <button class="btn" onclick="calculateCGPA()">Calculate CGPA</button>
-            <button class="btn" style="background-color: #4caf50;" onclick="addSemester()">Add Semester</button>
+            <button class="btnn" style="background-color: #4caf50;" onclick="addSemester()">Add Semester</button>
             <button class="btun" id="removeSemesterBtn" style="display:none;" onclick="removeSemester()">Remove Semester</button>
             <button class="btn" onclick="GPAtoPercentage()">GPA to Percentage(MU)</button>
         </div>
