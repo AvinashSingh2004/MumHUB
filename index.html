@@ -90,10 +90,10 @@
         <div class="nav-actions">
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Search" oninput="filterResults()">
-                <button><i class="fas fa-search"></i></button>
+                <button onclick="updateActionCount()"><i class="fas fa-search"></i></button>
                 <div class="search-results" id="search-results"></div>
             </div>
-            <a href="contact.html" class="contact-link">Contact</a>
+            <a href="contact.html" class="contact-link" onclick="updateActionCount()">Contact</a>
             <button id="theme-toggle" onclick="toggleTheme()">
                 <i id="theme-icon" class="fas fa-sun"></i>
             </button>
@@ -107,16 +107,16 @@
         <p>"Your one-stop destination for all university-related information."</p><br><br>
 
         <div class="buttons-container">
-    <a href="musyllabus.html" class="info-btn">🔍 MU-Syllabus</a>
-    <a href="http://www.mumresults.in" class="info-btn">🔍 MU-Results</a>
-    <a href="GPA.HTML" class="info-btn">🔍 GPA-Calculator</a>
-    <a href="GPApercent.html" class="info-btn">🔍 GPA To %</a>
-    <a href="progresstracker.html" class="info-btn">🔍 Progess Tracker</a> 
+    <a href="musyllabus.html" class="info-btn"  onclick="updateActionCount()">🔍 MU-Syllabus</a>
+    <a href="http://www.mumresults.in" class="info-btn" onclick="updateActionCount()">🔍 MU-Results</a>
+    <a href="GPA.HTML" class="info-btn" onclick="updateActionCount()">🔍 GPA-Calculator</a>
+    <a href="GPApercent.html" class="info-btn" onclick="updateActionCount()">🔍 GPA To %</a>
+    <a href="progresstracker.html" class="info-btn" onclick="updateActionCount()">🔍 Progess Tracker</a> 
         </div>
 
-        <div class="search-results" id="search-results"></div>
+        <div class="search-results" id="search-results" onclick="updateActionCount()"></div>
 
-        <div class="download-section"><br>
+        <div class="download-section" onclick="updateActionCount()"><br>
             <a href="notes.html" class="download-btn">
                 <i class="fas fa-download"></i> Download Notes & study stuffs
             </a>
@@ -126,6 +126,21 @@
                  alt="University of Mumbai Logo" class="university-logo">
         </div>
     </main>
+
+    <div class="visitor-container">
+    <div id="visitorCount" class="visitor-count">
+        <h2><i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+            <span id="count">0</span></h2>
+            <p style="font-weight: 600;">visits</p>
+    </div>
+    <div id="actionCount" class="action-count">
+        <h2>
+            <i class="fas fa-share-alt"></i> <!-- Font Awesome share icon -->
+            <span id="actionCountValue">0</span>
+        </h2>
+        <p style="font-weight: 600;">actions</p>
+    </div>
+    </div>
 </body>
 <!-- Footer Section -->
 <footer class="footer">
@@ -175,8 +190,38 @@
     }
 });
 
+// Function to update visitor count
+function updateVisitorCount() {
+    let visitorCount = localStorage.getItem('visitorCount');
+    if (!visitorCount) {
+        visitorCount = 0;
+    }
+    visitorCount++;
+    localStorage.setItem('visitorCount', visitorCount);
+    document.getElementById('count').innerText = visitorCount; // Update display
+}
 
+// Function to update action count
+function updateActionCount() {
+    let actionCount = localStorage.getItem('actionCount');
+    if (!actionCount) {
+        actionCount = 0;
+    }
+    actionCount++;
+    localStorage.setItem('actionCount', actionCount);
+    document.getElementById('actionCountValue').innerText = actionCount; // Update display
+}
 
+// Event listener for DOMContentLoaded to initialize counts
+document.addEventListener('DOMContentLoaded', function() {
+    updateVisitorCount(); // Update visitor count on page load
+    // Initialize action count display
+    let actionCount = localStorage.getItem('actionCount');
+    if (!actionCount) {
+        actionCount = 0;
+    }
+    document.getElementById('actionCountValue').innerText = actionCount; // Display action count
+});
 
     </script>
 </body>

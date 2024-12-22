@@ -277,6 +277,31 @@ body {
     background-color: #f1f1f1; /* Highlight on hover */
 }
 
+
+
+.visitor-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: center; /* Center the items */
+    gap: 20px; /* Space between the two sections */
+    margin: 20px 0; /* Margin for spacing */
+}
+
+.action-count {
+    font-size: 18px;
+    text-align: center; /* Center text */
+    margin: 10px;
+
+}
+
+.visitor-count {
+    font-size: 18px;
+    text-align: center; /* Center text */
+    margin: 10px;
+}
+
+
+
+
 #theme-toggle {
     background: none; /* Remove background */
     border: none; /* Remove border */
