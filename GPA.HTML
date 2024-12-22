@@ -212,17 +212,18 @@ button {
     border-color: #f44336;
 }
 
+.btnn {
+    background-color: #4caf50;
+    color: #ffffff;
+    border-color: #4caf50;
+}
 .btn {
     background-color: #0098cb;
     color: #ffffff;
     border-color: #0098cb;
 }
 
-.btnn {
-    background-color: #4caf50;
-    color: #ffffff;
-    border-color: #4caf50;
-}
+
 
 /* Hover States */
 button:hover {
@@ -231,7 +232,8 @@ button:hover {
 }
 
 .bttn:hover {
-    background-color: #66c3dd; /* Slightly darker blue */
+    background-color: #0078a7; /* Slightly darker blue */
+    color: #fff;
 }
     
 .bton:hover {
@@ -244,16 +246,21 @@ button:hover {
     color: #ffffff;
 }
 
-.btun:hover {
-    background-color: #d32f2f; /* Darker red */
-}
+
 
 .btn:hover {
     background-color: #0078a7; /* Darker blue */
 }
+
+
 .btnn:hover {
-    background-color:  #4caf50; /* Darker blue */
+    background-color:  var(--card-background); 
+    color: #39cc3e;}
+.btun:hover {
+    background-color:  var(--card-background); 
+    color: #d32f2f;
 }
+
         .button-container {
             text-align: center;
             margin-top: 15px;
@@ -345,13 +352,13 @@ body.dark-theme .grade-input:focus {
 body.dark-theme .bttn {
     background: linear-gradient(135deg, #6eeeff, #00a1b5);
     color: #121212;
-    border:none;
+    border-color: #02c0ff;
 }
 
 body.dark-theme .bton {
     background-color: #1e1e1e;
-    color: #4caf50;
-    border-color: #4caf50;
+    color: #39cc3e;
+    border-color: #39cc3e;
 }
 
 body.dark-theme .bten {
@@ -361,9 +368,9 @@ body.dark-theme .bten {
 }
 
 body.dark-theme .btnn {
-    background-color: #4caf50; 
+    background-color: #39cc3e; 
     color: #ffffff;
-    border-color: #4caf50;
+    border-color: #39cc3e;
 }
 
 body.dark-theme .btun {
@@ -387,15 +394,24 @@ body.dark-theme button:hover {
 }
 
 body.dark-theme .bttn:hover {
-    background-color: #1c86d1; /* Slightly darker blue */
+    opacity: 0.8;
 }
+
+body.dark-theme .btnn:hover {
+    background-color: #1e1e1e; 
+    color: #39cc3e;}
+
+    body.dark-theme .btun:hover {
+    background-color: #1e1e1e; 
+    color: #d32f2f;
+} 
 
 body.dark-theme .btn:hover {
     background-color: #00a1b5; /* Darker cyan */
 }
 
 body.dark-theme .bton:hover {
-    background-color: #4caf50; 
+    background-color: #39cc3e; 
     color: #1e1e1e;
 }
 body.dark-theme .bten:hover {
@@ -464,7 +480,7 @@ body.dark-theme .p {
         <div id="semesters"></div>
         <div class="button-container">
             <button class="btn" onclick="calculateCGPA()">Calculate CGPA</button>
-            <button class="btnn" style="background-color: #4caf50;" onclick="addSemester()">Add Semester</button>
+            <button class="btnn" onclick="addSemester()">Add Semester</button>
             <button class="btun" id="removeSemesterBtn" style="display:none;" onclick="removeSemester()">Remove Semester</button>
             <button class="btn" onclick="GPAtoPercentage()">GPA to Percentage(MU)</button>
         </div>
