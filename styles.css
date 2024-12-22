@@ -40,18 +40,6 @@ body {
     font-size: 1.2rem;
 }
 
-.specific-page.navbar .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    display: block;
-}
-
-.specific-page .logo span {
-    color: #000000;
-    font-size: 1.2rem;
-}
-
-
 .nav-actions {
     display: flex;
     align-items: center;
@@ -423,7 +411,7 @@ footer.footer {
     .nav-actions {
         flex-direction: row; 
         align-items: flex-start; /* Align items to the start */
-        width: 100%;
+        width: 60%;
     }
 
     .main-content {
@@ -456,16 +444,16 @@ footer.footer {
     }
 
     .contact-form {
-        width: 90%; /* Use percentage for width */
+        width: 80%; /* Use percentage for width */
         padding: 15px; /* Adjust padding */
     }
     .contact-link {
         margin:5px 0;
     }
     .home-link {
-        margin:5px 0;
-        margin-right: 800px;
+        margin:-1px 0;
     }
+
     .footer {
         padding: 1rem; /* Adjust footer padding */
     }

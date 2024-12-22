@@ -11,13 +11,9 @@
     <title>Contact</title>
     
     <style>
-        .logo {
-            margin-left: -60px;
-        }
         #theme-toggle, #theme-icon {
           display: none;
         }
-  
   /* Dark theme styles */
   body.dark-theme .contact-form {
       background-color: #2a2a2a; /* Dark background for the form */
@@ -66,6 +62,9 @@
               border-color: #7ed1ea;
               outline: none;
           }
+
+
+         
       </style>
   
 </head>
@@ -74,15 +73,15 @@
     <!-- Navbar -->
  
     <header class="navbar">
-        <a href="index.html" class="home-link">
-            <i class="fas fa-home"></i> <!-- Home icon -->
-        </a>
         <div class="logo">MU-HUB<span>.site</span>
         </div>
         <div class="nav-actions">
             <button id="theme-toggle" onclick="toggleTheme()">
                 <i id="theme-icon" class="fas fa-sun"></i> <!-- Default to sun icon -->
             </button>
+            <a href="index.html" class="home-link">
+                <i class="fas fa-home"></i> <!-- Home icon -->
+            </a>
         </div>
     </header>
 
