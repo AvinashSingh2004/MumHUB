@@ -6,7 +6,6 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Mumbai University HUB</title>
-     
     <script>
         
         function toggleTheme() {
@@ -85,7 +84,7 @@
 
 <body>
     <!-- Navbar -->
-    <header class="navbar">
+    <header class="navbar" onclick="updateActionCount()">
         <div class="logo">MU-HUB<span>.site</span></div>
         <div class="nav-actions">
             <div class="search-bar">
@@ -129,16 +128,15 @@
 
     <div class="visitor-container">
     <div id="visitorCount" class="visitor-count">
-        <h2><i class="fas fa-user"></i> <!-- Font Awesome user icon -->
+        <h2>
             <span id="count">0</span></h2>
-            <p style="font-weight: 600;">visits</p>
+            <p style="font-weight: 600;"><i class="fas fa-user"></i> Visits</p>
     </div>
     <div id="actionCount" class="action-count">
         <h2>
-            <i class="fas fa-share-alt"></i> <!-- Font Awesome share icon -->
             <span id="actionCountValue">0</span>
         </h2>
-        <p style="font-weight: 600;">actions</p>
+        <p style="font-weight: 600;"><i class="fas fa-share-alt"></i> Actions</p>
     </div>
     </div>
 </body>
@@ -190,40 +188,79 @@
     }
 });
 
-// Function to update visitor count
-function updateVisitorCount() {
-    let visitorCount = localStorage.getItem('visitorCount');
-    if (!visitorCount) {
-        visitorCount = 0;
-    }
-    visitorCount++;
-    localStorage.setItem('visitorCount', visitorCount);
-    document.getElementById('count').innerText = visitorCount; // Update display
+</script>
+
+<script type="module">
+    
+// Import necessary Firebase modules
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-app.js";
+import { getFirestore, doc, updateDoc, increment, getDoc } from "https://www.gstatic.com/firebasejs/9.17.2/firebase-firestore.js";
+
+// Firebase Configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAD3kK0s0H-LJZsIc_kffy4wlOsHulunjU",
+  authDomain: "visitoractioncount.firebaseapp.com",
+  projectId: "visitoractioncount",
+  storageBucket: "visitoractioncount.firebasestorage.app",
+  messagingSenderId: "972642848145",
+  appId: "1:972642848145:web:85de92ba05c87ba6725e30",
+  measurementId: "G-DVKS7X9GKW"
+};
+
+// Initialize Firebase App
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore
+const db = getFirestore(app);
+
+async function updateVisitorCount() {
+  // Reference the visitorCount document in the "counts" collection
+  const docRef = doc(db, "counts", "visitorCount");
+
+  // Increment the "count" field by 1
+  await updateDoc(docRef, {
+    count: increment(1)
+  });
+
+  // Fetch the updated count from Firestore
+  const docSnapshot = await getDoc(docRef);
+  if (docSnapshot.exists()) {
+    // Update the visitor count display on the page
+    document.getElementById("visitorCountValue").innerText = docSnapshot.data().count;
+  } else {
+    console.log("No such document!");
+  }
 }
 
-// Function to update action count
-function updateActionCount() {
-    let actionCount = localStorage.getItem('actionCount');
-    if (!actionCount) {
-        actionCount = 0;
-    }
-    actionCount++;
-    localStorage.setItem('actionCount', actionCount);
-    document.getElementById('actionCountValue').innerText = actionCount; // Update display
+async function updateActionCount() {
+  // Reference the actionCount document in the "counts" collection
+  const docRef = doc(db, "counts", "actionCount");
+
+  // Increment the "count" field by 1
+  await updateDoc(docRef, {
+    count: increment(1)
+  });
+
+  // Fetch the updated count from Firestore
+  const docSnapshot = await getDoc(docRef);
+  if (docSnapshot.exists()) {
+    // Update the action count display on the page
+    document.getElementById("actionCountValue").innerText = docSnapshot.data().count;
+  } else {
+    console.log("No such document!");
+  }
 }
 
-// Event listener for DOMContentLoaded to initialize counts
-document.addEventListener('DOMContentLoaded', function() {
-    updateVisitorCount(); // Update visitor count on page load
-    // Initialize action count display
-    let actionCount = localStorage.getItem('actionCount');
-    if (!actionCount) {
-        actionCount = 0;
-    }
-    document.getElementById('actionCountValue').innerText = actionCount; // Display action count
-});
+// Call the visitor count update function on page load
+window.onload = updateVisitorCount;
 
-    </script>
+// Example: Hook the action count function to a button click
+document.getElementById("actionButton").addEventListener("click", updateActionCount);
+
+
+</script>
+
+     
 </body>
 </html>
 

@@ -95,6 +95,7 @@ body {
     text-align: center;
     display: inline-block;
     width: auto;
+    overflow: hidden;
 }
 
 .info-btn:hover {
@@ -287,14 +288,14 @@ body {
 }
 
 .action-count {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center; /* Center text */
     margin: 10px;
 
 }
 
 .visitor-count {
-    font-size: 18px;
+    font-size: 16px;
     text-align: center; /* Center text */
     margin: 10px;
 }
@@ -446,6 +447,7 @@ body.dark-theme .info-btn {
     cursor: pointer; /* Pointer cursor on hover */
     font-weight: 600; /* Bold font weight */
     font-size: 0.8rem; /* Font size */
+    transition: all 0.3s;
     color: #ffffff; /* White text for better contrast */
     text-align: center; /* Center text */
     display: inline-block; /* Inline block for button */
@@ -453,21 +455,10 @@ body.dark-theme .info-btn {
     overflow: hidden; /* Hide overflow for the pseudo-element */
 }
 
-body.dark-theme .info-btn::before {
-    content: ''; /* Required for pseudo-element */
-    position: absolute; /* Position absolute to overlay the button */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Align to the right */
-    bottom: 0; /* Align to the bottom */
-    background: linear-gradient(135deg, #cbe7f1, #7ed1ea); /* Gradient background */
-    z-index: -1; /* Place behind the button */
-    border-radius: 25px; /* Match the button's border radius */
-    filter: brightness(0.8); /* Optional: adjust brightness for better contrast */
-}
+
 
 body.dark-theme .info-btn:hover {
-    background-color: #7ed1ea; /* Darker background on hover */
+    background: linear-gradient(135deg, #cbe7f1, #7ed1ea);
     color: #000;
     border: 1px solid #444;
 }
@@ -538,14 +529,6 @@ footer.footer {
 
     .search-bar input {
         width: 100%; /* Full width for input */
-    }
-
-    .info-btn {
-        width:auto;
-        flex: none; /* Make buttons full width on mobile */
-        padding: 5px 10px;
-        border-radius: 15px;
-        margin-bottom: 10px; /* Space between buttons */
     }
 
     .download-btn {
