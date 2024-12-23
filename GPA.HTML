@@ -6,44 +6,6 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>GPA Calculator</title>
-    <script>
-      function toggleTheme() {
-        const body = document.body;
-        const header = document.querySelector('header.navbar'); // Select the header
-    
-        // Toggle dark theme class
-        body.classList.toggle('dark-theme');
-        if (header) {
-            header.classList.toggle('dark-theme'); // Toggle dark theme on the header
-        }
-    
-        // Save the theme preference in local storage
-        localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
-}
-    
-    // Function to load the theme on page load
-    function loadTheme() {
-        const theme = localStorage.getItem('theme');
-        const body = document.body;
-        const header = document.querySelector('header.navbar'); // Select the header
-    
-        if (theme === 'dark') {
-            body.classList.add('dark-theme');
-            if (header) {
-                header.classList.add('dark-theme'); // Apply dark theme to the header
-            }
-        } else {
-            body.classList.remove('dark-theme');
-            if (header) {
-                header.classList.remove('dark-theme'); // Remove dark theme from the header
-            }
-        }
-    }
-    
-    // Call loadTheme on page load
-    document.addEventListener('DOMContentLoaded', loadTheme);
-
-    </script>
     <script src="theme.js"></script>
     <link rel="icon" href="mulogo.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
