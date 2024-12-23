@@ -196,6 +196,25 @@
         resultsContainer.style.display = 'none'; // Hide the results
     }
 });
+
+// Function to handle the event
+function handleInteraction(event) {
+    // Prevent default behavior if necessary
+    event.preventDefault();
+    
+    // Your logic here (e.g., updating counts, making API calls)
+    console.log('Interaction detected:', event.type);
+}
+
+// Add event listeners for both mouse and touch events
+const button = document.getElementById('your-button-id'); // Replace with your element's ID
+
+// For mouse events
+button.addEventListener('click', handleInteraction);
+
+// For touch events
+button.addEventListener('touchstart', handleInteraction);
+button.addEventListener('touchend', handleInteraction);
 </script>
 
 <script src="count.js"></script>  
