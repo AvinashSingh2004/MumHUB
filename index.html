@@ -7,9 +7,9 @@
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Mumbai University HUB</title>
     <link rel="icon" href="muhub.png" type="image/png">
-    <script src="https://cdn.jsdelivr.net/npm/countapi-js@latest/dist/countapi.min.js"></script>
-    <script>
-        
+    
+    
+    <script>    
         function toggleTheme() {
             const body = document.body;
             const themeIcon = document.getElementById('theme-icon');
@@ -69,6 +69,10 @@
 
 
 
+
+
+
+
     
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
@@ -84,15 +88,15 @@
 
 <body>
     <!-- Navbar -->
-    <header class="navbar" onclick="updateActionCount()">
+    <header class="navbar">
         <div class="logo">MU-HUB<span>.site</span></div>
         <div class="nav-actions">
             <div class="search-bar">
                 <input type="text" id="search-input" placeholder="Search" oninput="filterResults()">
-                <button onclick="updateActionCount()"><i class="fas fa-search"></i></button>
+                <button><i class="fas fa-search"></i></button>
                 <div class="search-results" id="search-results"></div>
             </div>
-            <a href="contact.html" class="contact-link" onclick="updateActionCount()">Contact</a>
+            <a href="contact.html" class="contact-link">Contact</a>
             <button id="theme-toggle" onclick="toggleTheme()">
                 <i id="theme-icon" class="fas fa-sun"></i>
             </button>
@@ -106,16 +110,16 @@
         <p>"Your one-stop destination for all university-related information."</p><br><br>
 
         <div class="buttons-container">
-    <a href="musyllabus.html" class="info-btn"  onclick="updateActionCount()">🔍 MU-Syllabus</a>
-    <a href="http://www.mumresults.in" class="info-btn" onclick="updateActionCount()">🔍 MU-Results</a>
-    <a href="GPA.HTML" class="info-btn" onclick="updateActionCount()">🔍 GPA-Calculator</a>
-    <a href="GPApercent.html" class="info-btn" onclick="updateActionCount()">🔍 GPA To %</a>
-    <a href="progresstracker.html" class="info-btn" onclick="updateActionCount()">🔍 Progess Tracker</a> 
+    <a href="musyllabus.html" class="info-btn">🔍 MU-Syllabus</a>
+    <a href="http://www.mumresults.in" class="info-btn">🔍 MU-Results</a>
+    <a href="GPA.HTML" class="info-btn">🔍 GPA-Calculator</a>
+    <a href="GPApercent.html" class="info-btn">🔍 GPA To %</a>
+    <a href="progresstracker.html" class="info-btn">🔍 Progess Tracker</a> 
         </div>
 
         <div class="search-results" id="search-results" onclick="updateActionCount()"></div>
 
-        <div class="download-section" onclick="updateActionCount()"><br>
+        <div class="download-section"><br>
             <a href="notes.html" class="download-btn">
                 <i class="fas fa-download"></i> Download Notes & study stuffs
             </a>
@@ -127,9 +131,14 @@
     </main>
 
     <div class="visitor-container">
-    <div id="visitorCount" class="visitor-count">
+        <div class="views-count">
+            <h2>
+                <span id="pageviews-count">0</span></h2>
+                <p style="font-weight: 600;"><i class="fas fa-eye"></i> Views</p>
+        </div>
+    <div class="visitor-count">
         <h2>
-            <span id="count">0</span></h2>
+            <span id="visits-count">0</span></h2>
             <p style="font-weight: 600;"><i class="fas fa-user"></i> Visits</p>
     </div>
     <div id="actionCount" class="action-count">
@@ -139,7 +148,7 @@
         <p style="font-weight: 600;"><i class="fas fa-share-alt"></i> Actions</p>
     </div>
     </div>
-</body>
+
 <!-- Footer Section -->
 <footer class="footer">
     <p>&copy; 2025 MU-HUB.site. All rights reserved.</p>
