@@ -6,7 +6,8 @@
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
     <meta name="keywords" content="Mumbai University, MU HUB, syllabus, notes, GPA calculator, progress tracker, engineering, computer engineering, university resources">
     <title>Mumbai University HUB</title>
-    <link rel="icon" href="mulogo.png" type="image/png">
+    <link rel="icon" href="1mulogo.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/countapi-js@latest/dist/countapi.min.js"></script>
     <script>
         
         function toggleTheme() {
@@ -186,68 +187,9 @@
         resultsContainer.style.display = 'none'; // Hide the results
     }
 });
-
 </script>
 
-<script type="module">
-    
-// Import necessary Firebase modules
-
-
-// Initialize Firebase App
-const app = initializeApp(firebaseConfig);
-
-// Initialize Firestore
-const db = getFirestore(app);
-
-async function updateVisitorCount() {
-  // Reference the visitorCount document in the "counts" collection
-  const docRef = doc(db, "counts", "visitorCount");
-
-  // Increment the "count" field by 1
-  await updateDoc(docRef, {
-    count: increment(1)
-  });
-
-  // Fetch the updated count from Firestore
-  const docSnapshot = await getDoc(docRef);
-  if (docSnapshot.exists()) {
-    // Update the visitor count display on the page
-    document.getElementById("visitorCountValue").innerText = docSnapshot.data().count;
-  } else {
-    console.log("No such document!");
-  }
-}
-
-async function updateActionCount() {
-  // Reference the actionCount document in the "counts" collection
-  const docRef = doc(db, "counts", "actionCount");
-
-  // Increment the "count" field by 1
-  await updateDoc(docRef, {
-    count: increment(1)
-  });
-
-  // Fetch the updated count from Firestore
-  const docSnapshot = await getDoc(docRef);
-  if (docSnapshot.exists()) {
-    // Update the action count display on the page
-    document.getElementById("actionCountValue").innerText = docSnapshot.data().count;
-  } else {
-    console.log("No such document!");
-  }
-}
-
-// Call the visitor count update function on page load
-window.onload = updateVisitorCount;
-
-// Example: Hook the action count function to a button click
-document.getElementById("actionButton").addEventListener("click", updateActionCount);
-
-
-</script>
-
-     
+<script src="count.js"></script>  
 </body>
 </html>
 
