@@ -35,6 +35,6 @@ app.get('/api', function(req, res) {
     res.json(obj);
 });
 
-app.listen(3002, () => {
-    console.log("Server running on port 3002");
+app.listen(3003, () => {
+    console.log("Server running on port 3003");
 });
