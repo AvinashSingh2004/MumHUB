@@ -282,23 +282,20 @@ body {
 
 .visitor-container {
     display: flex; /* Use flexbox to align items side by side */
+    align-items: center;
     justify-content: center; /* Center the items */
     gap: 20px; /* Space between the two sections */
     margin: 20px 0; /* Margin for spacing */
 }
 
-.action-count {
+.action-count, .visitor-count, .views-count {
     font-size: 16px;
     text-align: center; /* Center text */
-    margin: 10px;
+    margin: 15px;
 
 }
 
-.visitor-count {
-    font-size: 16px;
-    text-align: center; /* Center text */
-    margin: 10px;
-}
+
 
 
 
