@@ -282,6 +282,7 @@ body {
     background-color: #f1f1f1; /* Highlight on hover */
 }
 
+
 .visitor-container {
     display: flex; /* Use flexbox to align items side by side */
     align-items: center;
@@ -591,7 +592,7 @@ footer.footer {
     }
 
     .action-count, .visitor-count, .views-count {
-        margin: 10px;
+        margin: 15px;
     
     }
 
