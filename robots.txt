@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mu-hub.site/sitemap.xml
