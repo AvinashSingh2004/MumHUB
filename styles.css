@@ -113,6 +113,10 @@ body {
     width: 250px; /* Full width for search bar */
 }
 
+.search-bar:hover {
+    border: 1px solid #444;
+}
+
 .search-bar input {
     padding: 5px 10px;
     border: none;
@@ -130,7 +134,7 @@ body {
 }
 
 .search-bar button:hover {
-    background-color: #bcbcbc;
+    background-color: #f1f1f1;
 }
 
 /* Download Section */
@@ -391,6 +395,10 @@ body.dark-theme .search-bar {
     background: #2a2a2a; /* Dark background for search bar */
 }
 
+body.dark-theme .search-bar:hover {
+    border-color:#ffffff;
+}
+
 body.dark-theme .search-bar input {
     padding: 5px 10px; /* Padding for input */
     border:none; /* No border for input */
@@ -451,8 +459,6 @@ body.dark-theme .info-btn {
     width: auto; /* Auto width for button */
     overflow: hidden; /* Hide overflow for the pseudo-element */
 }
-
-
 
 body.dark-theme .info-btn:hover {
     background: linear-gradient(135deg, #cbe7f1, #7ed1ea);
@@ -526,6 +532,18 @@ footer.footer {
 
     .search-bar input {
         width: 100%; /* Full width for input */
+    }
+
+    .info-btn:hover {
+    background-color: #f1f1f1;
+    border: 1px solid #000000;
+    touch-action:auto;
+    }
+    body.dark-theme .info-btn:hover {
+        background: #2a2a2a;
+        border-color: #ffffff;
+        color: #ffffff;
+        touch-action: auto;
     }
 
     .download-btn {
