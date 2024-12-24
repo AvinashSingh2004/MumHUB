@@ -77,7 +77,6 @@
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <!-- Readex Pro Font -->
     <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -117,7 +116,7 @@
     <a href="progresstracker.html" class="info-btn">🔍 Progess Tracker</a> 
         </div>
 
-        <div class="search-results" id="search-results" onclick="updateActionCount()"></div>
+        <div class="search-results" id="search-results"></div>
 
         <div class="download-section"><br>
             <a href="notes.html" class="download-btn">
@@ -130,24 +129,23 @@
         </div>
     </main>
 
+    <div class="wrapper">
     <div class="visitor-container">
-        <div class="views-count">
-            <h2>
-                <span id="pageviews-count">0</span></h2>
-                <p style="font-weight: 600;"><i class="fas fa-eye"></i> Views</p>
+            <i id="ico" class="fas fa-eye"></i>
+            <span id="num" data-val="945">000</span>
+                <span class="text">Total Views</span>
         </div>
-    <div class="visitor-count">
-        <h2>
-            <span id="visits-count">0</span></h2>
-            <p style="font-weight: 600;"><i class="fas fa-user"></i> Visits</p>
+    <div class="visitor-container">
+        <i id="ico" class="fas fa-user"></i>
+        <span id="num" data-val="667">000</span>
+            <span class="text">Total Visits</span>
     </div>
-    <div id="actionCount" class="action-count">
-        <h2>
-            <span id="actionCountValue">0</span>
-        </h2>
-        <p style="font-weight: 600;"><i class="fas fa-share-alt"></i> Actions</p>
+    <div class="visitor-container">
+        <i id="ico" class="fas fa-share-alt"></i>
+        <span id="num" data-val="525">000</span>
+        <span class="text">Actions Taken</span>
     </div>
-    </div>
+</div>
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -197,27 +195,23 @@
     }
 });
 
-// Function to handle the event
-function handleInteraction(event) {
-    // Prevent default behavior if necessary
-    event.preventDefault();
-    
-    // Your logic here (e.g., updating counts, making API calls)
-    console.log('Interaction detected:', event.type);
-}
+let valueDisplays = document.querySelectorAll("#num");
+let interval = 4000;
+valueDisplays.forEach((valueDisplay) => {
+  let startValue = 0;
+  let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+  let duration = Math.floor(interval / endValue);
+  let counter = setInterval(function () {
+    startValue += 1;
+    valueDisplay.textContent = startValue;
+    if (startValue == endValue) {
+      clearInterval(counter);
+    }
+  }, duration);
+});
 
-// Add event listeners for both mouse and touch events
-const button = document.getElementById('your-button-id'); // Replace with your element's ID
 
-// For mouse events
-button.addEventListener('click', handleInteraction);
-
-// For touch events
-button.addEventListener('touchstart', handleInteraction);
-button.addEventListener('touchend', handleInteraction);
-</script>
-
-<script src="count.js"></script>  
+</script> 
 </body>
 </html>
 

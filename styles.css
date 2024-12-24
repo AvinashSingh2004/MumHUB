@@ -282,37 +282,106 @@ body {
     background-color: #f1f1f1; /* Highlight on hover */
 }
 
+.wrapper {
+    position: relative;
+    width: 60vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
 
-.visitor-container {
+  .visitor-container {
+    width: 24vmin;
+    height: 24vmin;
     display: flex; /* Use flexbox to align items side by side */
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 5px; /* Space inside the container */
-    margin:auto; /* Space outside the container */
-    font-family: Arial, sans-serif; /* Font style */
-    color: #333; /* Text color */
-}
-
-
-.action-count, .visitor-count, .views-count {
+    justify-content: space-around;
+    padding: 1em 0; /* Space inside the container */
+    position: relative;
     font-size: 16px;
-    text-align: center; /* Center text */
-    margin: 25px;
-
+    border-radius: 0.5em;
+    background: linear-gradient(135deg, #ffffff, #f0f0f0); /* Light background gradient */
+    border-bottom: 10px solid #5bb8e4; /* Change to a lighter border color */
 }
 
-.visitor-container h2 {
-    font-size: 18px; /* Heading size */
-    margin-bottom: 10px; /* Space below heading */
+ #ico {
+    color: #5bb8e4; /* Change icon color to a lighter shade */
+    font-size: 2.5em;
+    text-align: center;
 }
 
-body.dark-theme .visitor-container{
-    background: none; 
-    border: none;
-    color: #c3e1ec;
-
+#num {
+    color: #333333; /* Darker text color for better contrast */
+    display: grid;
+    place-items: center;
+    font-weight: 600;
+    font-size: 3em;
 }
 
+span.text {
+    color: #555555; /* Change text color to a softer shade */
+    font-size: 1em;
+    text-align: center;
+    padding: 0.7em 0; /* Corrected 'pad' to 'padding' */
+    font-weight: 400;
+    line-height: 0; /* Adjust line-height for better readability */
+}
+
+body.dark-theme .visitor-container {
+    background: linear-gradient(135deg, #2a2a2a, #000000); 
+    border-bottom: 10px solid #7ed1ea;
+}
+
+body.dark-theme #ico {
+    color: #7ed1ea;
+}
+
+body.dark-theme #num {
+    color: #ffffff;
+}
+
+
+body.dark-theme span.text {
+    color: #e0e0e0;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .wrapper {
+      width: 85vw;
+    }
+    .visitor-container {
+      height: 26vmin;
+      width: 26vmin;
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      width: 90vw;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .visitor-container {
+      width: 30vmin;
+      height: 30vmin;
+      font-size: 14px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .wrapper {
+      gap: 15px;
+    }
+    .visitor-container {
+      width: 25vmin;
+      height: 25vmin;
+      font-size: 8px;
+    }
+  }
 
 
 
