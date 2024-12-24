@@ -577,6 +577,12 @@ footer.footer {
         align-items: center; /* Center buttons */
         justify-content: center;
     }
+
+    .action-count, .visitor-count, .views-count {
+        font-size: 10px;
+        margin: 10px;
+    
+    }
 }
 
 
