@@ -1,0 +1,4 @@
+[[headers]]
+for = "/robots.txt"
+[headers.values]
+Content-Type = "text/plain"
