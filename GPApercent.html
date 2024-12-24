@@ -47,7 +47,7 @@
         select, input[type="number"] {
             width: 100%;
             padding: 10px;
-            border: 1px solid #0098cb;
+            border: 1px solid #02c0ff;
             border-radius: 5px;
             font-size: 16px;
             transition: border-color 0.3s;
@@ -70,18 +70,18 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
         #calculateButton {
-            background-color: #0098cb;
+            background-color: #02c0ff;
             color: white;
             border: none;
             border-radius: 5px;
             padding: 10px 15px;
             font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s;
             width: 100%;
         }
         #calculateButton:hover {
-            background-color: #007197;
+            background-color: #1eb9ec;
+            opacity: 0.8;
         }
         #result {
             margin-top: 15px;
@@ -137,9 +137,8 @@ body.dark-theme #calculateButton {
     color: white; /* Button text color */
 }
 
-body.dark-theme #calculateButton:hover,
-body.dark-theme #calculateButton.clicked {
-    background-color: #008cb3; /* Darker shade on hover or clicked */
+body.dark-theme #calculateButton:hover {
+    background-color: #42d0ff; /* Darker shade on hover or clicked */
 }
 
 body.dark-theme #result {
@@ -160,6 +159,12 @@ body.dark-theme .p {
         .card-title {
                 font-size: 24px;
                 text-align:left;
+        }
+        #calculateButton:hover {
+            background-color: #02c0ff;
+        }
+        body.dark-theme #calculateButton:hover {
+            background-color: #02c0ff; 
         }
 }
 
