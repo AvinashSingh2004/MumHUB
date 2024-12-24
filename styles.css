@@ -282,24 +282,35 @@ body {
     background-color: #f1f1f1; /* Highlight on hover */
 }
 
-
-
 .visitor-container {
     display: flex; /* Use flexbox to align items side by side */
     align-items: center;
-    justify-content: center; /* Center the items */
-    gap: 20px; /* Space between the two sections */
-    margin: 20px 0; /* Margin for spacing */
+    justify-content: center;
+    padding: 5px; /* Space inside the container */
+    margin:auto; /* Space outside the container */
+    font-family: Arial, sans-serif; /* Font style */
+    color: #333; /* Text color */
 }
+
 
 .action-count, .visitor-count, .views-count {
     font-size: 16px;
     text-align: center; /* Center text */
-    margin: 15px;
+    margin: 25px;
 
 }
 
+.visitor-container h2 {
+    font-size: 18px; /* Heading size */
+    margin-bottom: 10px; /* Space below heading */
+}
 
+body.dark-theme .visitor-container{
+    background: none; 
+    border: none;
+    color: #c3e1ec;
+
+}
 
 
 
@@ -357,11 +368,11 @@ body {
 
 /* Dark theme styles for the logo */
 header.navbar.dark-theme .logo span {
-    color: #7ed1ea; /* Change color to #7ed1ea in dark theme */
+    color: #7ed1ea;  
 }
 
 header.navbar.dark-theme .logo {
-    color: #7ed1ea; 
+    color: #7ed1ea;  
 }
 /* Ensure the text color for links in the header is also updated */
 header.navbar.dark-theme .contact-link {
@@ -562,6 +573,7 @@ footer.footer {
         margin:-2px 0;
     }
 
+
     .footer {
         padding: 1rem; /* Adjust footer padding */
     }
@@ -579,10 +591,18 @@ footer.footer {
     }
 
     .action-count, .visitor-count, .views-count {
-        font-size: 10px;
         margin: 10px;
     
     }
+
+    .visitor-container h2 {
+        font-size: 16px; /* Heading size */
+        margin-bottom: 6px;
+    }
+    .visitor-container p {
+        font-size: 14px;
+    }
+
 }
 
 
