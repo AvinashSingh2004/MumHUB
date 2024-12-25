@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us - Mu-Hub</title>
+    <style>
+         body {
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        body.dark-theme {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        body.light-theme {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-us {
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        body.dark-theme .about-us {
+            background: linear-gradient(135deg, #2a2a2a, #000000); 
+            border: 1px solid #444;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.light-theme .about-us {
+            background: linear-gradient(135deg, #ffffff, #eaeaea);
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            transform: skewX(-20deg);
+            z-index: 0;
+        }
+
+        body.dark-theme .about-us::before {
+            background: linear-gradient(120deg, rgba(126, 209, 234, 0.1), rgba(126, 209, 234, 0.5));
+        }
+
+        body.light-theme .about-us::before {
+            background: linear-gradient(120deg, rgba(126, 209, 234, 0.2), rgba(126, 209, 234, 0.6));
+        }
+
+        .about-us h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        body.dark-theme .about-us h1 {
+            color: #7ed1ea;
+        }
+
+        body.light-theme .about-us h1 {
+            color: #007ea8;
+        }
+
+        .about-us p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        body.dark-theme .about-us p {
+            color: #c7e8f2;
+        }
+
+        body.light-theme .about-us p {
+            color: #555;
+        }
+
+        .about-us .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature {
+            flex: 1 1 250px;
+            max-width: 300px;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body.dark-theme .feature {
+            background: linear-gradient(135deg, #2a2a2a, #444);
+            border: 1px solid #555;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        body.light-theme .feature {
+            background: linear-gradient(135deg, #ffffff, #f5f5f5);
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        body.dark-theme .feature:hover {
+            box-shadow: 0 8px 20px rgba(126, 209, 234, 0.5);
+        }
+
+        body.light-theme .feature:hover {
+            box-shadow: 0 8px 20px rgba(126, 209, 234, 0.3);
+        }
+
+        .feature h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        body.dark-theme .feature h3 {
+            color: #7ed1ea;
+        }
+
+        body.light-theme .feature h3 {
+            color: #007ea8;
+        }
+
+        .feature p {
+            font-size: 1rem;
+        }
+
+        body.dark-theme .feature p {
+            color: #c7e8f2;
+        }
+
+        body.light-theme .feature p {
+            color: #555;
+        }
+         
+        .back-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;;
+            font-size: 2.5rem;
+            color:  #007ea8;
+            border: none;
+            text-decoration: none;
+        }
+
+        .back-button a:hover {
+            color: #58b2c8;
+        }
+        
+        body.dark-theme .back-button a {
+                color:  #7ed1ea;
+        }
+
+        body.dark-theme .back-button a:hover {
+                color:  #b6e5f4;
+        }
+
+        /* Futuristic Theme Toggle */
+        .theme-toggle-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 70px;
+            height: 40px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #58b2c8, #7ed1ea);
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .theme-toggle-container:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .theme-toggle-slider {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body.light-theme .theme-toggle-slider {
+            transform: translateX(30px);
+        }
+
+        .theme-toggle-icon {
+            font-size: 1.2rem;
+            color: #fff;
+            z-index: 1;
+        }
+
+        .theme-toggle-icon.sun {
+            margin-left: 5px;
+        }
+
+        .theme-toggle-icon.moon {
+            margin-right: 5px;
+        }
+
+        /* Glow Effect */
+        body.dark-theme .theme-toggle-slider {
+            background: radial-gradient(circle, rgba(126, 209, 234, 0.8), rgba(126, 209, 234, 0.1));
+        }
+
+        body.light-theme .theme-toggle-slider {
+            background: radial-gradient(circle, rgba(255, 204, 0, 0.8), rgba(255, 204, 0, 0.1));
+        }
+
+        @media (max-width: 768px) {
+            .about-us h1 {
+                font-size: 2rem;
+            }
+
+            .about-us p {
+                font-size: 1rem;
+            }
+
+            .feature {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-us h1 {
+                font-size: 1.8rem;
+            }
+
+            .about-us p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="back-button">
+                <a href="index.html"><i class="fas fa-home"></i></a>
+            </div>
+         <div class="theme-toggle-container" onclick="toggleTheme()">
+                <span class="theme-toggle-icon sun">☀️</span>
+                <div class="theme-toggle-slider"></div>
+                <span class="theme-toggle-icon moon">🌙</span>
+            </div>
+    <div class="container">
+        <div class="about-us">
+            <h1>About Us</h1>
+            <p>Welcome to <strong>Mu-Hub</strong>, your ultimate hub for innovative educational tools and resources!</p>
+            <p>At <strong>Mu-Hub</strong>, we are dedicated to simplifying and enhancing your academic journey. From powerful tools like GPA calculators and progress trackers to comprehensive university information and curated notes, our platform is designed to support students at every step.</p>
+
+            <div class="features">
+                <div class="feature">
+                    <h3>Smart Educational Tools</h3>
+                    <p>Easily calculate your GPA, track your progress, and more with our user-friendly tools.</p>
+                </div>
+
+                <div class="feature">
+                    <h3>University Insights</h3>
+                    <p>Explore essential information about universities to make informed decisions for your future.</p>
+                </div>
+
+                <div class="feature">
+                        <h3>Study Resources</h3>
+                        <p>Access high-quality notes and materials to enhance your understanding and excel in academics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+         // Toggle Theme Functionality
+         function toggleTheme() {
+            const body = document.body;
+            const isDark = body.classList.contains('dark-theme');
+
+            // Toggle theme classes
+            body.classList.toggle('dark-theme', !isDark);
+            body.classList.toggle('light-theme', isDark);
+
+            // Save the current theme to localStorage
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        }
+
+        // Load Theme on Page Load
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.classList.add(savedTheme + '-theme');
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTheme);
+        </script>
+    </body>
+    </html>
+    

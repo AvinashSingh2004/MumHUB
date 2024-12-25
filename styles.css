@@ -173,7 +173,7 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.contact-link {
+.contact-link, .about-link {
     text-decoration: none;
     color: #000000;
     font-size: 0.9rem;
@@ -445,7 +445,7 @@ header.navbar.dark-theme .logo {
     color: #7ed1ea;  
 }
 /* Ensure the text color for links in the header is also updated */
-header.navbar.dark-theme .contact-link {
+header.navbar.dark-theme .contact-link, header.navbar.dark-theme .about-link {
     color: #7ed1ea; /* Change link color to #7ed1ea */
 }
 
@@ -636,7 +636,7 @@ footer.footer {
         width: 80%; /* Use percentage for width */
         padding: 15px; /* Adjust padding */
     }
-    .contact-link {
+    .contact-link, .about-link {
         margin:5px 0;
     }
     .home-link {
