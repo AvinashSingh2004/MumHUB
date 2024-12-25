@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
-    <meta name="keywords" content="Mumbai University, MU HUB,mu hub, percentage to gpa, notes, GPA calculator, progress tracker, engineering, computer engineering, GPA TO Percentage, gpa to %, SGPA , CGPA , SGPI , CGPI,  resources">
+    <meta name="keywords" content="Mumbai University, MU HUB,mu hub, percentage to gpa, SGPI TO CGPA, notes, GPA calculator, progress tracker, engineering, computer engineering, GPA TO Percentage, gpa to %, SGPA , CGPA , SGPI , CGPI,  resources">
     <title>GPA to Percentage</title>
     <script src="theme.js"></script>
     <link rel="icon" href="muhub.png" type="image/png">
@@ -20,8 +20,8 @@
   gtag('config', 'G-F6YWDX6KL0');
 </script>
     <style>
-        .card {
-            background-color: #ffffff;
+        .grading-scale-card, .card {
+            background: linear-gradient(135deg, #ffffff, #f9f9f9);
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
@@ -38,10 +38,10 @@
         }
         .card-title {
             color: #000000;
-            margin-bottom: 20px;
+            margin: auto;
             font-size: 28px;
             font-weight: 700;
-            text-align: center;
+            text-align: auto;
         }
         .form-group {
             margin: 15px 0;
@@ -77,7 +77,7 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-        #calculateButton {
+        #calculateButton, #calculateCGPA, #toggleGradingScaleButton {
             background-color: #02c0ff;
             color: white;
             border: none;
@@ -87,7 +87,7 @@ input[type=number]::-webkit-outer-spin-button {
             cursor: pointer;
             width: 100%;
         }
-        #calculateButton:hover {
+        #calculateButton:hover, #calculateCGPA:hover, #toggleGradingScaleButton:hover {
             background-color: #1eb9ec;
             opacity: 0.8;
         }
@@ -97,6 +97,18 @@ input[type=number]::-webkit-outer-spin-button {
             font-weight: 600;
             color: #333;
         }
+
+#semesterInputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between input fields */
+}
+.form-groups {
+    flex: 1; /* Allow inputs to grow equally */
+    min-width: 120px; /* Minimum width for each input */
+}
+
+
         h2 {
     text-align: left; /* Align text to the left */
     margin-left: 20px; /* Add left margin for indentation */
@@ -116,7 +128,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* Dark theme styles */
 body.dark-theme .card {
-    background-color: #1e1e1e; /* Dark background for the card */
+    background: linear-gradient(135deg, #2a2a2a, #000000); 
     box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Lighter shadow for dark theme */
 }
 
@@ -140,12 +152,12 @@ body.dark-theme input[type="number"]:focus {
     border-color: #10b0e6; /* Change border color on focus */
 }
 
-body.dark-theme #calculateButton {
+body.dark-theme #calculateButton, #calculateButtonSGPA, #toggleGradingScaleButton {
     background-color: #02c0ff; /* Button background color for dark theme */
     color: white; /* Button text color */
 }
 
-body.dark-theme #calculateButton:hover {
+body.dark-theme #calculateButton:hover, #calculateButtonSGPA:hover, #toggleGradingScaleButton:hover {
     background-color: #42d0ff; /* Darker shade on hover or clicked */
 }
 
@@ -165,13 +177,13 @@ body.dark-theme .p {
 
 @media (max-width: 768px) {
         .card-title {
-                font-size: 24px;
-                text-align:left;
+                font-size: 20px;
+                text-align:auto;
         }
-        #calculateButton:hover {
+        #calculateButton:hover, #calculateButtonSGPA:hover, #toggleGradingScaleButton:hover {
             background-color: #02c0ff;
         }
-        body.dark-theme #calculateButton:hover {
+        body.dark-theme #calculateButton:hover, #calculateButtonSGPA:hover, #toggleGradingScaleButton:hover {
             background-color: #02c0ff; 
         }
 }
@@ -180,7 +192,7 @@ body.dark-theme .p {
 </head>
 <body>
     <header class="navbar">
-        <div class="logo">GPA To %<span style="font-size: 16px;"> (General Method)</span></div>
+        <div class="logo">GPA To Percentage</div>
         <div class="nav-actions">
         <a href="index.html" class="home-link">
                 <i class="fas fa-home"></i> <!-- Home icon -->
@@ -192,6 +204,23 @@ body.dark-theme .p {
         <br>
         <div class="card">
             <div class="card-content">
+        <h2 class="card-title">Choose Your Grading Scale</h2>
+        <br>
+        <button id="toggleGradingScaleButton">Grading Scale</button>
+        <div  id="gradingScaleCard" style="display: none;">
+            <div class="form-group">
+                <select id="gradingScale">
+                    <option value="4.0">4.0 Scale (US)</option>
+                    <option value="5.0">5.0 Scale (Inter)</option>
+                    <option value="10.0">10.0 Scale (IN)</option>
+                    <option value="10.0_MU" selected>10.0 Scale (MU)</option>
+                </select>
+        </div>
+            </div></div></div>
+            <br>
+
+        <div class="card">
+            <div class="card-content">
                 <h2 class="card-title">GPA To Percentage Converter</h2>
                 <div class="form-group">
                     <label for="conversionType">Choose Conversion Type:</label>
@@ -201,23 +230,51 @@ body.dark-theme .p {
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="gradingScale">Choose Grading Scale:</label>
-                    <select id="gradingScale">
-                        <option value="4.0">4.0 Scale</option>
-                        <option value="5.0">5.0 Scale</option>
-                        <option value="10.0">10.0 Scale</option>
-                        <option value="10.0_MU">10.0 Scale (MU)</option>
-                    </select>
-                </div>
-                <div class="form-group">
                     <label for="valueInput">Enter Value:</label>
                     <input type="number" id="valueInput" placeholder="Enter your GPA" min="0" step="any" />
                 </div>
                 <button id="calculateButton">Calculate</button>
                 <div id="result" style="margin-top: 15px;"></div>
             </div>
-        </div>
-        <br>
+        </div><br>
+        <div class="card">
+            <div class="card-content">
+                <h2 class="card-title">SGPA To Percentage</h2>
+                 <!-- Semester Format Selection -->
+                <div class="form-group">
+                    <label for="semesterFormat">Choose Semester Format:</label>
+                    <select id="semesterFormat" value"8">
+                        <option value="2">2 Semesters</option>
+                        <option value="3">3 Semesters</option>
+                        <option value="4">4 Semesters</option>
+                        <option value="5">5 Semesters</option>
+                        <option value="6">6 Semesters</option>
+                        <option value="7">7 Semesters</option>
+                        <option value="8" selected>8 Semesters</option>
+                        <option value="9">9 Semesters</option>
+                        <option value="10">10 Semesters</option>
+                    </select>
+                </div>
+            <div class="form-group">
+                <div id="semesterInputs" style="display: flex; flex-direction: row; gap: 10px;">
+                </div>
+            <div class="form-group">
+                <button id="calculateCGPA">Calculate</button>
+            </div>
+            </div></div></div>
+              <br>
+              <div class="card" id="resultCard" style="display: none;">
+                <div class="card-content">
+                    <div class="form-group">
+                        <h3 id="calculatedCGPA">Calculated CGPA:</h3>
+                    </div>
+                    <div class="form-group">
+                        <h2 style="margin: auto;" id="calculatedPercentage">Converted Percentage: </h2>
+                    </div>
+                </div>
+            </div>
+        
+        <br><br>
         <h2>About this Tool</h2>
         <p class="p">Convert GPA to Percentage and Percentage to GPA effortlessly with our online calculator! Our tool supports various grading scales, including:
                <strong> <br>4.0 scale (US)<br>5.0 scale (International)<br>10.0 scale (India)<br>10.0 scale (MU)<br></strong>
@@ -231,6 +288,7 @@ body.dark-theme .p {
                 Select your grading scale, enter your score, and get instant results. Our calculator makes it easy to switch between GPA and percentage scores, saving you time and effort. Whether you're a student, teacher, or administrator, our GPA-Percentage converter is the perfect tool for you. Try it now and simplify your grade conversions!</p>
     </main>
     <script>
+        // CARD 1 //
         // Function to update the placeholder based on conversion type
         function updatePlaceholder() {
             const conversionType = document.getElementById('conversionType').value;
@@ -331,9 +389,108 @@ calculateButton.addEventListener('click', function() {
         // Initialize placeholder on page load
         updatePlaceholder();
 
+// CARD 2 //
+// Function to update semester input fields based on selected format
+// Function to update semester input fields based on selected format
+function updateSemesterInputs() {
+    const semesterFormat = document.getElementById('semesterFormat').value;
+    const semesterInputs = document.getElementById('semesterInputs');
+    semesterInputs.innerHTML = ''; // Clear previous inputs
 
+    for (let i = 1; i <= semesterFormat; i++) {
+        const inputGroup = document.createElement('div');
+        inputGroup.className = 'form-groups';
+        inputGroup.style.flex = '1'; // Allow inputs to grow equally
+        inputGroup.innerHTML = `
+            <label for="semester${i}">Semester ${i}:</label>
+            <input type="number" id="semester${i}" placeholder="Enter SGPA" min="0" max="10" step="any" />
+        `;
+        semesterInputs.appendChild(inputGroup);
+    }
+}
 
-      
+// Initialize semester inputs on page load
+updateSemesterInputs();
+
+// Event listener for semester format change
+document.getElementById('semesterFormat').addEventListener('change', updateSemesterInputs);
+
+// Select the calculate CGPA button
+const calculateCGPABtn = document.getElementById('calculateCGPA');
+
+// Modify the calculate CGPA button functionality
+calculateCGPABtn.addEventListener('click', function() {
+    let totalSGPA = 0;
+    let count = 0;
+    const semesterFormat = document.getElementById('semesterFormat').value;
+    let allFilled = true; // Flag to check if all inputs are filled
+
+    for (let i = 1; i <= semesterFormat; i++) {
+        const sgpaValue = parseFloat(document.getElementById(`semester${i}`).value);
+        if (isNaN(sgpaValue) || sgpaValue < 0) {
+            allFilled = false; // Set flag to false if any input is invalid
+            break; // Exit the loop if an invalid input is found
+        } else {
+            totalSGPA += sgpaValue;
+            count++;
+        }
+    }
+
+    // Check if all inputs are filled
+    if (!allFilled || count === 0) {
+        alert("Please fill in all SGPA inputs before calculating."); // Alert the user
+        return; // Exit the function to prevent further calculations
+    }
+
+    const calculatedCGPA = (totalSGPA / count).toFixed(2);
+    document.getElementById('calculatedCGPA').innerText = `Calculated CGPA: ${calculatedCGPA}`;
+
+    // Calculate percentage based on CGPA
+    let percentage;
+    const gradingScale = document.getElementById('gradingScale').value; // Ensure you have a grading scale selection
+
+    switch (gradingScale) {
+        case '4.0':
+            percentage = (calculatedCGPA * 100) / 4;
+            break;
+        case '5.0':
+            percentage = calculatedCGPA * 20;
+            break;
+        case '10.0':
+            percentage = calculatedCGPA * 9.5;
+            break;
+        case '10.0_MU':
+            if (calculatedCGPA < 7) {
+                percentage = (calculatedCGPA * 7.1) + 12; // Correct formula for CGPA < 7
+            } else {
+                percentage = (calculatedCGPA * 7.4) + 12; // Correct formula for CGPA >= 7
+            }
+            break;
+        default:
+            percentage = 0;
+    }
+
+    document.getElementById('calculatedPercentage').innerText = `Converted Percentage: ${percentage.toFixed(2)}%`;
+
+    // Show the result card
+    document.getElementById('resultCard').style.display = 'block';
+});
+// Initialize semester inputs on page load
+updateSemesterInputs();
+
+// Event listener for semester format change
+document.getElementById('semesterFormat').addEventListener('change', updateSemesterInputs);
+
+// Toggle Grading Scale Card
+document.getElementById('toggleGradingScaleButton').addEventListener('click', function() {
+    const gradingScaleCard = document.getElementById('gradingScaleCard');
+    if (gradingScaleCard.style.display === 'none') {
+        gradingScaleCard.style.display = 'block'; // Show the grading scale card
+    } else {
+        gradingScaleCard.style.display = 'none'; // Hide the grading scale card
+    }
+});
+
     </script>
     
 </body>
