@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="muhubsite.png" type="image/png">
+    <script src="theme.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Welcome to Mumbai University HUB, your one-stop destination for all university-related information, including syllabus, notes, GPA calculator, and progress tracking for engineering students.">
+    <meta name="keywords" content="mu courses, MU-HUB, mu-hub site, mu, muhub, Mumbai University, MU HUB, syllabus, mumbai university courses, GPA calculator, progress tracker, engineering, computer engineering, university resources">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5409075228676424"
+    crossorigin="anonymous"></script>
+    <title>Mumbai University Courses</title>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+      
+        gtag('config', 'G-F6YWDX6KL0');
+    </script>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            font-family: 'READEX PRO', sans-serif;
+        }
+        body.dark-theme {
+            background-color: #333;
+            color: #fff;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        #courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+        }
+        #courses li {
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            height: 170px;
+            position: relative;
+            text-align: center;
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+        }
+        body.dark-theme #courses li {
+            background: linear-gradient(135deg, #2a2a2a, #000000); 
+            border-color: #555;
+        }
+        #courses li:hover {
+                background: #f0f0f0;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-theme #courses li:hover {
+            background: #555;
+        }
+        .course-details {
+            margin-top: 10px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+            height: 170px;
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
+            top: 100%;
+            left: 0;
+            z-index: 1;
+            display: none; /* Hide initially */
+        }
+        body.dark-theme .course-details {
+            background: linear-gradient(135deg, #2a2a2a, #000000); 
+            border-color: #555;
+        }
+        .course-icon {
+            font-size: 5em;
+            margin-top: 10px;
+            color: #888;
+        }
+        body.dark-theme .course-icon {
+            color: #ccc;
+        }
+        .course-details h2 {
+            margin-top: 0;
+        }
+        @media (max-width: 768px) {
+            #courses li {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            #courses li {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+             <header class="navbar">
+                <div class="logo">MU Courses</div>
+                <div class="nav-actions">
+                    <a href="index.html" class="home-link">
+                        <i class="fas fa-home"></i> <!-- Home icon -->
+                    </a>
+                </div>
+            </header>
+    <div class="container">
+        <h1>Courses of Mumbai University</h1>
+        <ul id="courses">
+                <li data-courses="357" data-fees="₹ 2.4 K - 14.64 L">
+                        Bachelor of Arts (BA)<br>
+                        <i class="fas fa-paint-brush course-icon"></i>
+                    </li>
+                    <li data-courses="719" data-fees="₹ 2.4 K - 22.35 L">
+                        Bachelor of Science (BSc)<br>
+                        <i class="fas fa-flask course-icon"></i>
+                    </li>
+                    <li data-courses="784" data-fees="₹ 2.4 K - 3.82 L">
+                        Bachelor of Commerce (BCom)<br>
+                        <i class="fas fa-chart-line course-icon"></i>
+                    </li>
+                    <li data-courses="410" data-fees="₹ 60 K - 7.65 L">
+                        Bachelor of Engineering (BE/BTech)<br>
+                        <i class="fas fa-cogs course-icon"></i>
+                    </li>
+                    <li data-courses="195" data-fees="₹ 2 K - 8.41 L">
+                        Master of Arts (MA)<br>
+                        <i class="fas fa-paint-brush course-icon"></i>
+                    </li>
+                    <li data-courses="329" data-fees="₹ 17.08 K - 8.41 L">
+                        Master of Science (MSc)<br>
+                        <i class="fas fa-flask course-icon"></i>
+                    </li>
+                    <li data-courses="189" data-fees="₹ 2 K - 1.21 L">
+                        Master of Commerce (MCom)<br>
+                        <i class="fas fa-chart-line course-icon"></i>
+                    </li>
+                    <li data-courses="107" data-fees="₹ 21.26 K - 8.41 L">
+                        Master of Business Administration (MBA/PGDM)<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="193" data-fees="₹ 15 K - 8.1 L">
+                        Bachelor of Management Studies (BMS/BBM)<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="32" data-fees="₹ 72.84 K - 7.13 L">
+                        Bachelor of Pharmacy (BPharma)<br>
+                        <i class="fas fa-pills course-icon"></i>
+                    </li>
+                    <li data-courses="27" data-fees="₹ 30 K - 3.63 L">
+                        Master of Computer Applications (MCA)<br>
+                        <i class="fas fa-laptop-code course-icon"></i>
+                    </li>
+                    <li data-courses="35" data-fees="₹ 69 K - 8.41 L">
+                        Master of Management Studies (MMS)<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="120" data-fees="₹ 16.08 K - 2.58 L">
+                        Bachelor of Education (B.Ed)<br>
+                        <i class="fas fa-chalkboard-teacher course-icon"></i>
+                    </li>
+                    <li data-courses="31" data-fees="₹ 6 K - 1.7 L">
+                        Bachelor of Laws (LL.B.)<br>
+                        <i class="fas fa-gavel course-icon"></i>
+                    </li>
+                    <li data-courses="34" data-fees="₹ 40 K - 8.39 L">
+                        Bachelor of Architecture (B.Arch)<br>
+                        <i class="fas fa-drafting-compass course-icon"></i>
+                    </li>
+                    <li data-courses="88" data-fees="₹ 30 K - 2.58 L">
+                        Bachelor of Mass Media (BMM)<br>
+                        <i class="fas fa-bullhorn course-icon"></i>
+                    </li>
+                    <li data-courses="61" data-fees="₹ 550 - 6.61 L">
+                        PG Diploma<br>
+                        <i class="fas fa-certificate course-icon"></i>
+                    </li>
+                    <li data-courses="108" data-fees="₹ 30 K - 2.8 L">
+                        Master of Engineering (ME/MTech)<br>
+                        <i class="fas fa-cogs course-icon"></i>
+                    </li>
+                    <li data-courses="33" data-fees="₹ 48.15 K - 8.1 L">
+                        Bachelor of Business Administration (BBA)<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="29" data-fees="₹ 13.48 K - 4.46 L">
+                        Bachelor of Vocation (B.Voc)<br>
+                        <i class="fas fa-tools course-icon"></i>
+                    </li>
+                    <li data-courses="11" data-fees="₹ 30 K - 53.59 K">
+                        Bachelor of Business Management (BBM)<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="62" data-fees="₹ 440 - 20 K">
+                        UG Diploma<br>
+                        <i class="fas fa-certificate course-icon"></i>
+                    </li>
+                    <li data-courses="81" data-fees="₹ 300 - 40 K">
+                        Certificate<br>
+                        <i class="fas fa-certificate course-icon"></i>
+                    </li>
+                    <li data-courses="8" data-fees="₹ 9 K - 3.34 L">
+                        Bachelor of Legal Studies (B.L.S. LL.B.)<br>
+                        <i class="fas fa-gavel course-icon"></i>
+                    </li>
+                    <li data-courses="15" data-fees="₹ 26.8 K - 8 L">
+                        Bachelor of Fine Arts (BFA)<br>
+                        <i class="fas fa-paint-brush course-icon"></i>
+                    </li>
+                    <li data-courses="30" data-fees="₹ 400 - 5.5 K">
+                        After 10th Diploma<br>
+                        <i class="fas fa-certificate course-icon"></i>
+                    </li>
+                    <li data-courses="2" data-fees="₹ 57.6 K">
+                        Bachelor of Financial Markets (BFM)<br>
+                        <i class="fas fa-chart-line course-icon"></i>
+                    </li>
+                    <li data-courses="23" data-fees="₹ 76.02 K - 3.48 L">
+                        Master of Pharmacy (MPharma)<br>
+                        <i class="fas fa-pills course-icon"></i>
+                    </li>
+                    <li data-courses="8" data-fees="₹ 42 K - 1.36 L">
+                        Master of Education (M.Ed)<br>
+                        <i class="fas fa-chalkboard-teacher course-icon"></i>
+                    </li>
+                    <li data-courses="15" data-fees="₹ 1 L - 2.13 L">
+                        Master of Architecture (M.Arch)<br>
+                        <i class="fas fa-drafting-compass course-icon"></i>
+                    </li>
+                    <li data-courses="4" data-fees="₹ 3.52 L - 6 L">
+                        Bachelor of Design (B.Des)<br>
+                        <i class="fas fa-paint-brush course-icon"></i>
+                    </li>
+                    <li data-courses="3" data-fees="₹ 1.69 L">
+                        Bachelor of Business Administration and LL.B. (BBA LL.B.)<br>
+                        <i class="fas fa-gavel course-icon"></i>
+                    </li>
+                    <li data-courses="2" data-fees="₹ 4.03 L">
+                        Bachelor of Computer Applications (BCA)<br>
+                        <i class="fas fa-laptop-code course-icon"></i>
+                    </li>
+                    <li data-courses="1" data-fees="₹ 60 K">
+                        Master of Social Work (MSW)<br>
+                        <i class="fas fa-hands-helping course-icon"></i>
+                    </li>
+                    <li data-courses="3" data-fees="₹ 1.45 L">
+                        Master of Hotel Management and Tourism (MHMTT)<br>
+                        <i class="fas fa-hotel course-icon"></i>
+                    </li>
+                    <li data-courses="3" data-fees="₹ 1.15 L - 2.14 L">
+                        Executive MBA/PGDM<br>
+                        <i class="fas fa-briefcase course-icon"></i>
+                    </li>
+                    <li data-courses="5" data-fees="₹ 53.05 K">
+                        Mass Media and Mass Communication (B.M.M.M.C.)<br>
+                        <i class="fas fa-bullhorn course-icon"></i>
+                    </li>
+                    <li data-courses="4" data-fees="₹ 1.08 L">
+                        Auxiliary Nurse Midwifery (ANM)<br>
+                        <i class="fas fa-user-nurse course-icon"></i>
+                    </li>
+                    <li data-courses="1" data-fees="₹ 3.9 L">
+                        Aircraft Maintenance Engineering (A.M.E.)<br>
+                        <i class="fas fa-plane course-icon"></i>
+                    </li>
+                    <li data-courses="1" data-fees="₹ 4.1 L">
+                        Bachelor of Mass Communication (B.M.C.)<br>
+                        <i class="fas fa-bullhorn course-icon"></i>
+                    </li>
+                    <li data-courses="1" data-fees="₹ 1.78 L">
+                        Master of Design (M.Des)<br>
+                        <i class="fas fa-paint-brush course-icon"></i>
+                    </li>
+                    <li data-courses="6" data-fees="₹ 70 K - 1.7 L">
+                        Bachelor of Arts and Bachelor of Laws (BA LL.B.)<br>
+                        <i class="fas fa-gavel course-icon"></i>
+                    </li>
+                    <li data-courses="96" data-fees="₹ 24 K - 2.56 L">
+                        Doctor of Philosophy (Ph.D.)<br>
+                        <i class="fas fa-graduation-cap course-icon"></i>
+                    </li>
+        </ul>
+        <div id="course-details" class="course-details"></div>
+    </div>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            const courses = document.querySelectorAll('#courses li');
+            let previousClickedItem = null;
+
+            courses.forEach(course => {
+                course.addEventListener('click', function(event) {
+                    // Prevent the click event from propagating to the document
+                    event.stopPropagation();
+
+                    // Remove any existing course-details elements
+                    const existingDetails = document.querySelector('.course-details');
+                    if (existingDetails) {
+                        existingDetails.remove();
+                    }
+
+                    // Show the previously hidden list item
+                    if (previousClickedItem) {
+                        previousClickedItem.style.display = 'block';
+                    }
+
+                    const courseName = this.textContent;
+                    const numberOfCourses = this.getAttribute('data-courses');
+                    const tuitionFees = this.getAttribute('data-fees');
+
+                    // Create a new course-details element
+                    const courseDetails = document.createElement('div');
+                    courseDetails.classList.add('course-details');
+                    courseDetails.innerHTML = `
+                        <h2>${courseName}</h2>
+                        <p>Number of Courses: ${numberOfCourses}</p>
+                        <p>Tuition Fees: ${tuitionFees}</p>
+                    `;
+
+                    // Insert the course-details element after the clicked list item
+                    this.insertAdjacentElement('afterend', courseDetails);
+
+                    // Hide the clicked list item
+                    this.style.display = 'none';
+
+                    // Update the previousClickedItem
+                    previousClickedItem = this;
+
+                    // Ensure the course-details element has the same width as the clicked list item
+                    courseDetails.style.width = this.offsetWidth + 'px';
+                    courseDetails.style.display = 'block'; // Show the course-details element
+
+                    // Add click event to the course-details element to toggle back
+                    courseDetails.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        courseDetails.remove();
+                        previousClickedItem.style.display = 'block';
+                        previousClickedItem = null;
+                    });
+                });
+            });
+
+            // Hide the course-details when clicking anywhere outside
+            document.addEventListener('click', function() {
+                const existingDetails = document.querySelector('.course-details');
+                if (existingDetails) {
+                    existingDetails.previousElementSibling.style.display = 'block'; // Show the previously hidden list item
+                    existingDetails.remove();
+                    previousClickedItem = null;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
