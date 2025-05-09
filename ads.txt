@@ -1,1 +1,1 @@
-google.com, pub-5409075228676424, DIRECT, f08c47fec0942fa0
+curl -L https://srv.adstxtmanager.com/19390/[mu-hub.site].com > ads.txt
